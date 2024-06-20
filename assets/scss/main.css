@@ -57,6 +57,9 @@ nav a:hover {
   color: #FFFFFF;
 }
 
+main {
+  /* Media Queries */
+}
 main .container {
   display: flex;
   justify-content: center;
@@ -121,13 +124,13 @@ main .top-circle h3 {
   margin-top: 35px;
   margin-left: 8px;
 }
-
-.calculate {
+main .calculate {
   width: 480px;
   height: 480px;
   background-color: #A5DD9B;
+  margin: auto;
 }
-.calculate h2 {
+main .calculate h2 {
   font-size: 20px;
   font-family: "Ubuntu Mono", monospace;
   display: flex;
@@ -137,7 +140,7 @@ main .top-circle h3 {
   font-weight: 200;
   padding-top: 110px;
 }
-.calculate p {
+main .calculate p {
   font-size: 20px;
   font-family: "Ubuntu Mono", monospace;
   display: flex;
@@ -147,7 +150,7 @@ main .top-circle h3 {
   font-weight: 400;
   margin-left: 35px;
 }
-.calculate p.text {
+main .calculate p.text {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -157,7 +160,7 @@ main .top-circle h3 {
   font-weight: 400;
   line-height: 15px;
 }
-.calculate input {
+main .calculate input {
   width: 272px;
   height: 25px;
   border-radius: 77px;
@@ -172,19 +175,19 @@ main .top-circle h3 {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.calculate input::-moz-placeholder {
+main .calculate input::-moz-placeholder {
   font-size: 1rem;
   font-family: "Ubuntu Mono", monospace;
   color: #FFFFFF;
   text-align: center;
 }
-.calculate input::placeholder {
+main .calculate input::placeholder {
   font-size: 1rem;
   font-family: "Ubuntu Mono", monospace;
   color: #FFFFFF;
   text-align: center;
 }
-.calculate button {
+main .calculate button {
   width: 108px;
   height: 25px;
   border-radius: 77px;
@@ -197,52 +200,186 @@ main .top-circle h3 {
   margin: auto;
   font-size: 12px;
 }
-.calculate button:hover {
+main .calculate button:hover {
   background-color: #E6FF94;
   color: #40A578;
 }
-.calculate .top-circle {
+main .calculate .top-circle {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: #40A578;
-  border: 6px solid #A5DD9B;
-  margin-left: 60px;
-  margin-top: 60px;
+  background-color: #A5DD9B;
+  border: 6px solid #40A578;
+  margin-left: 54px;
+  margin-top: 52px;
   animation: pulse 10s infinite;
 }
-.calculate .top-circle h3 {
-  color: #A5DD9B;
+main .calculate .top-circle h3 {
+  color: #006769;
   line-height: 14px;
   font-size: 14px;
   font-family: "Ubuntu Mono", monospace;
-  margin-top: 28px;
-  margin-left: 22px;
+  margin-top: 25px;
+  margin-left: 4px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
-
-/* Media Queries */
+main .greenCheck h2 {
+  font-size: 2rem;
+  font-family: "Ubuntu Mono", monospace;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #E6FF94;
+  font-weight: 500;
+  margin-left: 35px;
+  margin-top: 100px;
+}
+main .greenCheck h2 br {
+  display: none;
+}
+main .greenCheck p {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #FFFFFF;
+  font-weight: 400;
+  margin-left: 35px;
+  margin-top: 50px;
+}
+main .greenCheck input {
+  width: 272px;
+  height: 25px;
+  border-radius: 77px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: #A5DD9B;
+  color: #006769;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+main .greenCheck input::-moz-placeholder {
+  font-size: 1rem;
+  font-family: "Ubuntu Mono", monospace;
+  color: #006769;
+  text-align: center;
+}
+main .greenCheck input::placeholder {
+  font-size: 1rem;
+  font-family: "Ubuntu Mono", monospace;
+  color: #006769;
+  text-align: center;
+}
+main .greenCheck button {
+  width: 108px;
+  height: 25px;
+  border-radius: 77px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #A5DD9B;
+  color: #006769;
+  margin: auto;
+  font-size: 12px;
+}
+main .greenCheck button:hover {
+  background-color: #E6FF94;
+  color: #40A578;
+}
+main .greenCheck .top-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #A5DD9B;
+  border: 6px solid #40A578;
+  margin-left: 54px;
+  margin-top: 52px;
+  animation: pulse 10s infinite;
+}
+main .greenCheck .top-circle h3 {
+  color: #006769;
+  line-height: 14px;
+  font-size: 14px;
+  font-family: "Ubuntu Mono", monospace;
+  margin-top: 32px;
+  margin-left: 4px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+main .resources {
+  height: 100vh;
+  background-color: #A5DD9B;
+}
+main .resources h2 {
+  color: #006769;
+  font-size: 2.5rem;
+  margin-left: 3rem;
+  padding-top: 5rem;
+  font-weight: 400;
+}
+main .resources p {
+  color: #006769;
+  font-size: 1rem;
+  line-height: 1rem;
+  margin-left: 3rem;
+}
+main .resources .resourceList {
+  margin-top: 2rem;
+}
+main .resources .resourceList ul {
+  color: #006769;
+  margin-top: 3rem;
+  margin-left: 5.5rem;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  main .resources .resourceList ul {
+    margin-left: 2rem;
+  }
+}
+main .resources .resourceList ul li {
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+main .resources .resourceList ul li a {
+  color: #006769;
+  text-decoration: none;
+  font-size: 1rem;
+}
+main .resources .resourceList ul li a:hover {
+  text-decoration: underline;
+}
 @media (min-width: 1200px) {
-  header {
+  main header {
     width: 1250px;
     padding: 0 20px;
     margin: -16px;
   }
-  header nav {
+  main header nav {
     font-size: 16px;
   }
-  header ul {
+  main header ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .container .big-circle {
+  main .container .big-circle {
     width: 540px;
     height: 540px;
     border-radius: 50%;
     margin: auto;
     margin-top: 70px;
   }
-  .container .big-circle h1 {
+  main .container .big-circle h1 {
     line-height: 85px;
     font-size: 85px;
     font-family: "Ubuntu Mono", monospace;
@@ -250,7 +387,7 @@ main .top-circle h3 {
     margin: auto -128px;
     margin-top: 26px;
   }
-  .container .big-circle .small-circle {
+  main .container .big-circle .small-circle {
     width: 246px;
     height: 246px;
     border-radius: 50%;
@@ -259,19 +396,19 @@ main .top-circle h3 {
     margin-left: 350px;
     margin-top: -80px;
   }
-  .container .big-circle .small-circle h2 {
+  main .container .big-circle .small-circle h2 {
     line-height: 24px;
     font-size: 24px;
     font-weight: 300;
   }
-  .container .top-circle {
+  main .container .top-circle {
     width: 200px;
     height: 200px;
     margin-left: -230px;
     margin-top: 245px;
     background-color: #A5DD9B;
   }
-  .container .top-circle h3 {
+  main .container .top-circle h3 {
     line-height: 24px;
     font-size: 24px;
     display: flex;
@@ -280,22 +417,22 @@ main .top-circle h3 {
     text-align: center;
     margin-top: 90px;
   }
-  .calculate {
+  main .calculate {
     width: 1260px;
     height: 650px;
     margin: auto;
     margin-top: 380px;
   }
-  .calculate h2 {
+  main .calculate h2 {
     font-size: 48px;
     padding-top: 110px;
   }
-  .calculate p {
+  main .calculate p {
     font-size: 38px;
     font-family: "Ubuntu Mono", monospace;
     margin-left: 35px;
   }
-  .calculate p.text {
+  main .calculate p.text {
     font-size: 20px;
     line-height: 20px;
     display: flex;
@@ -303,7 +440,7 @@ main .top-circle h3 {
     text-align: center;
     margin-bottom: 30px;
   }
-  .calculate input {
+  main .calculate input {
     width: 680px;
     height: 40px;
     display: flex;
@@ -313,14 +450,14 @@ main .top-circle h3 {
     margin-top: 50px;
     margin-bottom: 30px;
   }
-  .calculate button {
+  main .calculate button {
     width: 234px;
     height: 40px;
     border-radius: 77px;
     margin: auto;
     font-size: 16px;
   }
-  .calculate .top-circle {
+  main .calculate .top-circle {
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -330,12 +467,124 @@ main .top-circle h3 {
     margin-top: -35px;
     animation: pulse 10s infinite;
   }
-  .calculate .top-circle h3 {
+  main .calculate .top-circle h3 {
     color: #A5DD9B;
     line-height: 26px;
     font-size: 26px;
     font-family: "Ubuntu Mono", monospace;
     margin-top: 72px;
     margin-left: 63px;
+  }
+  main .greenCheck {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #40A578;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: -10rem;
+  }
+  main .greenCheck h2 {
+    color: #E6FF94;
+    font-size: 2rem;
+    margin-top: 50px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 768px) {
+  main .greenCheck h2 {
+    margin-top: -25rem;
+  }
+}
+@media (min-width: 1200px) {
+  main .greenCheck p {
+    color: #E6FF94;
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1200px) and (max-width: 768px) {
+  main .greenCheck p {
+    color: #A5DD9B;
+  }
+}
+@media (min-width: 1200px) {
+  main .greenCheck form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .greenCheck form #website-url {
+    padding: 10px;
+    background-color: #A5DD9B;
+    border: 1px solid #40A578;
+    border-radius: 3rem;
+    margin-bottom: 2rem;
+    color: #006769;
+    font-family: "Ubuntu Mono", monospace;
+    width: 700px;
+    height: 20px;
+  }
+  main .greenCheck form #website-url::-moz-placeholder {
+    font-size: 16px;
+    font-family: "Ubuntu Mono", monospace;
+    color: #006769;
+    text-align: center;
+  }
+  main .greenCheck form #website-url::placeholder {
+    font-size: 16px;
+    font-family: "Ubuntu Mono", monospace;
+    color: #006769;
+    text-align: center;
+  }
+  main .greenCheck form #website-url:focus {
+    border-color: #E6FF94;
+    outline: none;
+  }
+}
+@media (min-width: 1200px) and (max-width: 768px) {
+  main .greenCheck form #website-url {
+    width: 267px;
+    height: 5px;
+  }
+}
+@media (min-width: 1200px) {
+  main .greenCheck .res-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #A5DD9B;
+    border: 6px solid #40A578;
+    margin-left: -34px;
+    margin-top: -5rem;
+    animation: pulse 10s infinite;
+  }
+  main .greenCheck .res-circle h3 {
+    color: #006769;
+    line-height: 14px;
+    font-size: 14px;
+    font-family: "Ubuntu Mono", monospace;
+    margin-top: 35px;
+    margin-left: 8px;
+  }
+}
+@media (min-width: 1200px) and (min-width: 1200px) {
+  main .greenCheck .res-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-left: -60rem;
+    margin-top: 245px;
+    background-color: #A5DD9B;
+  }
+  main .greenCheck .res-circle h3 {
+    line-height: 24px;
+    font-size: 24px;
+    margin-top: 190px;
+  }
+  main .greenCheck .res-circle h3 {
+    line-height: 24px;
+    font-size: 24px;
+    margin-top: 93px;
   }
 }

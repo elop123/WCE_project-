@@ -1,7 +1,8 @@
 @import './helpers/variables';
 @import './helpers/mixin';
 @import './helpers/animations';
-
+// @import './pages/greencheck';
+// @import './pages/resourses';
 
 
 body{
@@ -95,95 +96,211 @@ main{
         }
         animation: pulse 10s infinite;
     }
-}
-
- .calculate {
-     width:480px;
-     height: 480px;
-    
-    background-color:$light_color;
-    // margin: $margin;
-    h2{
-        font-size: 20px;
-        font-family: $font-family;
-        @include display-main;
-        color: $main_color;
-        font-weight: 200;
-        padding-top: 110px;
-    }
-    p{ font-size: 20px;
+    .calculate {
+        width:480px;
+        height: 480px;
+        background-color:$light_color;
+        margin: $margin;
+       h2{
+           font-size: 20px;
+           font-family: $font-family;
+           @include display-main;
+           color: $main_color;
+           font-weight: 200;
+           padding-top: 110px;
+       }
+       p{ font-size: 20px;
+           font-family: $font-family;
+           @include display-text-center;
+           color: $text_color;
+           font-weight: $font-weight;
+           margin-left: 35px;
+       }
+       p.text{
+           @include display-text-center;
+           font-size: 11px;
+           font-family: $font-family;
+           color: $text_color;
+           font-weight: $font-weight;
+           line-height: 15px;
+       }
+       input {
+               width: 272px;
+               height: 25px;
+               border-radius: 77px;
+               border: none;
+               @include display-text-center;
+               align-items: center;
+               background-color: $main_color;
+               color: $white_color;
+               margin: $margin;
+               margin-top: 30px;
+               margin-bottom: 30px;
+               &::placeholder {
+                   font-size: 1rem;
+                   font-family: $font-family;
+                   color: $white_color;
+                   text-align: center;
+               }
+           }
+       button{
+           width: 108px;
+           height: 25px;
+           border-radius: 77px;
+           border: none;
+           @include display-main;
+           background-color: $main_color;
+           color: $white_color;
+           margin: $margin;
+           font-size: 12px;
+           &:hover{
+           background-color: #E6FF94;
+           color: $main_color;
+           }
+       }
+       .top-circle{
+           width:80px;
+           height:80px;
+           border-radius: $border-radius;
+           background-color: $light_color;
+           border:6px solid $main_color;
+           margin-left: 54px;
+        margin-top:52px;
+           h3{
+               color: $text_color;
+               line-height: $line-height;
+               font-size: $font-size;
+               font-family: $font-family;
+               margin-top: 25px;
+               margin-left: 4px;
+               @include display-text-center;
+           }
+           animation: pulse 10s infinite;
+       }
+   }
+   .greenCheck{
+     h2{
+        font-size: 2rem;
         font-family: $font-family;
         @include display-text-center;
-        color: $text_color;
-        font-weight: $font-weight;
+        color: $accent_color;
+        font-weight: 500;
         margin-left: 35px;
-    }
-    p.text{
-        @include display-text-center;
-        font-size: 11px;
-        font-family: $font-family;
-        color: $text_color;
-        font-weight: $font-weight;
-        line-height: 15px;
-    }
-    input {
-            width: 272px;
-            height: 25px;
-            border-radius: 77px;
-            border: none;
-            @include display-text-center;
-            align-items: center;
-            background-color: $main_color;
-            color: $white_color;
-            margin: $margin;
-            margin-top: 30px;
-            margin-bottom: 30px;
-            &::placeholder {
-                font-size: 1rem;
-                font-family: $font-family;
-                color: $white_color;
-                text-align: center;
-            }
+        margin-top: 100px;
+        br{
+            display: none;
         }
-    button{
-        width: 108px;
+     }
+     p{font-family: $font-family;
+        font-size: 16px;
+        @include display-text-center;
+        color: $white_color;
+        font-weight: 400;
+        margin-left: 35px;
+        margin-top: 50px;
+
+     }
+     input {
+        width: 272px;
         height: 25px;
         border-radius: 77px;
         border: none;
-        @include display-main;
-        background-color: $main_color;
-        color: $white_color;
+        @include display-text-center;
+        align-items: center;
+        background-color: $light_color;
+        color: $text_color;
         margin: $margin;
-        font-size: 12px;
-        &:hover{
-        background-color: #E6FF94;
-        color: $main_color;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        &::placeholder {
+            font-size: 1rem;
+            font-family: $font-family;
+            color: $text_color;
+            text-align: center;
         }
     }
-    .top-circle{
-        width:80px;
-        height:80px;
-        border-radius: $border-radius;
-        background-color: $main_color;
-        border:6px solid $light_color;
-        margin-left: 60px;
-        margin-top:60px;
-        h3{
-            color: $light_color;
-            line-height: $line-height;
-            font-size: $font-size;
-            font-family: $font-family;
-             margin-top: 28px;
-             margin-left: 22px;
-            // display: center;
-            // justify-content: center;
-            // text-align: center;
-            // align-items: center;
-        }
-        animation: pulse 10s infinite;
-        
+button{
+    width: 108px;
+    height: 25px;
+    border-radius: 77px;
+    border: none;
+    @include display-main;
+    background-color: $light_color;
+    color: $text_color;
+    margin: $margin;
+    font-size: 12px;
+    &:hover{
+    background-color: #E6FF94;
+    color: $main_color;
     }
 }
+.top-circle{
+    width:80px;
+    height:80px;
+    border-radius: $border-radius;
+    background-color: $light_color;
+    border:6px solid $main_color;
+    margin-left: 54px;
+ margin-top:52px;
+    h3{
+        color: $text_color;
+        line-height: $line-height;
+        font-size: $font-size;
+        font-family: $font-family;
+        margin-top: 32px;
+        margin-left: 4px;
+        @include display-text-center;
+    }
+    animation: pulse 10s infinite;
+}
+   }
+   .resources{
+    height: 100vh;
+    background-color: $light_color;
+    h2{
+        color: $text_color;
+        font-size: 2.5rem;
+        margin-left: 3rem;
+        padding-top:5rem;
+        font-weight: $font-weight;
+       
+    }
+    p {
+        color: $text_color;
+        font-size: 1rem;
+        line-height: 1rem;
+        margin-left: 3rem;
+        
+    }
+    .resourceList {
+        margin-top: 2rem;
+        ul {
+            color: $text_color;
+            margin-top: 3rem;
+            margin-left: 5.5rem;
+            padding: 0;
+ 
+            @media (max-width: 768px) {
+                margin-left: 2rem;
+            }
+        }
+        ul li {
+            margin-bottom: 2rem;
+            margin-left: 2rem;
+            a {
+                color: $text_color;
+                text-decoration: none;
+                font-size: 1rem;
+                
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+
 
 
 
@@ -304,4 +421,134 @@ main{
     animation: pulse 10s infinite;
 }
 }
+.greenCheck {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $main_color;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: -10rem;
+    // height: 100vh;
+ 
+    h2 {
+        color: $accent_color;
+        // margin-bottom: 2rem;
+        font-size: 2rem;
+        margin-top: 50px;
+ 
+        @media (max-width: 768px) {
+            margin-top: -25rem;
+        }
+    }
+ 
+    p {
+        color: $accent_color;
+        margin-bottom: 2.5rem;
+        font-size: 1rem;
+ 
+        @media (max-width: 768px) {
+            color: $light_color;
+        }
+    }
+ 
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+ 
+        #website-url {
+            padding: 10px;
+            background-color: $light_color;
+            border: 1px solid $main_color;
+            border-radius: 3rem;
+            margin-bottom: 2rem;
+            color: $text_color;
+            font-family: $font-family;
+            width: 700px;
+            height: 20px;
+ 
+            &::placeholder {
+                font-size: 16px;
+                font-family: $font-family;
+                color: $text_color;
+                text-align: center;
+            }
+ 
+            &:focus {
+                border-color: $accent_color;
+                outline: none;
+            }
+            // #beginButton{
+            //     width: 108px;
+            //     height: 25px;
+            //     border-radius: 77px;
+            //     border: none;
+            //     @include display-main;
+            //     background-color: $main_color;
+            //     color: $white_color;
+            //     margin: $margin;
+            //     font-size: 12px;
+            //     &:hover{
+            //     background-color: #E6FF94;
+            //     color: $main_color;
+            //     }
+            // }
+        }
+ 
+       
+        @media (max-width: 768px) {
+            #website-url {
+                width: 267px;
+                height: 5px;
+            }
+        }
+    }
+ 
+    .res-circle {
+            width:80px;
+            height:80px;
+            border-radius: $border-radius;
+            background-color: $light_color;
+            border:6px solid $main_color;
+            margin-left: -34px;
+            margin-top:-5rem;
+            h3{
+                color: $text_color;
+                line-height: $line-height;
+                font-size: $font-size;
+                font-family: $font-family;
+                margin-top: 35px;
+                margin-left: 8px;
+            }
+            animation: pulse 10s infinite;
+        }
+ 
+    @media (min-width: 1200px) {
+        .res-circle {
+            width:200px;
+            height:200px;
+            border-radius: $border-radius;
+            margin-left: -60rem;
+            margin-top:245px;
+            background-color:$light_color;
+            h3{
+                line-height: 24px;
+                font-size: 24px;
+            //    @include display-main;
+            //     text-align: center;
+                margin-top: 190px;
+            }
+ 
+            h3 {
+                line-height: 24px;
+                font-size: 24px;
+                margin-top: 93px;
+            }
+        }
+    }
+}
+}
+
 }
