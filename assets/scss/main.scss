@@ -38,7 +38,6 @@ main{
     .container {
         @include display-main;
         height: 100vh;
-    }
     .big-circle{
         width:340px;
         height: 340px;
@@ -47,7 +46,6 @@ main{
         border: 3px solid $accent_color;
         margin: 10px ;
         margin-left: 50px;
-
      h1{
         color: $accent_color;
             line-height: 40px;
@@ -95,12 +93,11 @@ main{
             margin-left: 8px;
         }
         animation: pulse 10s infinite;
-    }
+    }}
     .calculate {
         width:480px;
-        height: 80hv;
+        height: 80vh;
         background-color:$light_color;
-        margin: $margin;
        h2{
            font-size: 20px;
            font-family: $font-family;
@@ -162,10 +159,10 @@ main{
            width:80px;
            height:80px;
            border-radius: $border-radius;
-           background-color: $light_color;
+           background-color:$light_color;
            border:6px solid $main_color;
-           margin-left: 54px;
-           margin-top:72px;
+           margin-left: 62px;
+           margin-top:52px;
            h3{
                color: $text_color;
                line-height: $line-height;
@@ -318,7 +315,7 @@ button{
 
 main{
     .container{
-        height: 100hv;
+        height: 100vh;
         margin-bottom: 10rem;
         .big-circle {
             width:540px;
@@ -366,7 +363,8 @@ main{
     }
      .calculate {
         width:1260px;
-        height: 100hv;
+        height: 100vh;
+   
          h2{
             font-size: 48px;
              padding-top: 110px;
@@ -404,34 +402,32 @@ main{
          background-color: $main_color;
          border:6px solid $light_color;
          margin-left: 130px;
-        margin-top:-85px;
+        margin-top:-110px;
          h3{
             color:$light_color;
              line-height: 26px;
              font-size: 26px;
              font-family: $font-family;
               margin-top: 72px;
-              margin-left: 14px;
-            
+              margin-left: 2px;
          }
          animation: pulse 10s infinite;
      }
      }
     .greenCheck{
-        height: 66vh;
+        height: 100vh;
          h2{
-            font-size: 2rem;
+            font-size: 3rem;
             font-family: $font-family;
             @include display-text-center;
             color: $accent_color;
             font-weight: 500;
             margin: auto;
-            br{
-                display: none;
-            }
+            margin-top: 10rem;
+           
          }
          p{font-family: $font-family;
-            font-size: 16px;
+            font-size: 2rem;
             @include display-text-center;
             color: $white_color;
             font-weight: 400;
@@ -440,8 +436,8 @@ main{
     
          }
          input {
-            width: 272px;
-            height: 25px;
+            width: 680px;
+            height: 40px;
             border-radius: 77px;
             border: none;
             @include display-text-center;
@@ -459,8 +455,8 @@ main{
             }
         }
     button{
-        width: 108px;
-        height: 25px;
+        width: 234px;
+         height: 40px;
         border-radius: 77px;
         border: none;
         @include display-main;
@@ -474,39 +470,41 @@ main{
         }
     }
     .top-circle{
-        width:80px;
-        height:80px;
+        width:180px;
+        height:180px;
         border-radius: $border-radius;
         background-color: $light_color;
         border:6px solid $main_color;
-        margin-left: 62px;
-        margin-top:4rem;
-        margin-bottom: -20px;
+        margin-left: 126px;
+        margin-top:220px;
+        
         h3{
             color: $text_color;
-            line-height: $line-height;
-            font-size: $font-size;
+            line-height: 26px;
+            font-size: 26px;
             font-family: $font-family;
-            margin-top: 32px;
+            margin-top: 82px;
             margin-left: 4px;
             @include display-text-center;
         }
         animation: pulse 10s infinite;
     }
+    }
     .resources{
-        height: 100hv;
+        //height: 100vh;
+        background-color: $light_color;
         h2{
             color: $text_color;
             font-size: 4rem;
             margin-left: 3rem;
-            margin-top:5rem;
+            margin-top:115px;
         }
         p {
             color: $text_color;
-            font-size: 1rem;
-            line-height: 1rem;
+            font-size: 2rem;
+            line-height: 2rem;
             margin-left: 3rem;
-            margin-top: 5rem;
+            margin-top: 3rem;
             
         }
         .resourceList {
@@ -521,13 +519,12 @@ main{
                     a {
                         color: $text_color;
                         text-decoration: none;
-                        font-size: 1rem;
+                        font-size: 2rem;
                         }
                     }
                 }
             }
             
-        }
     }
 }
 }

@@ -63,7 +63,7 @@ main .container {
   align-items: center;
   height: 100vh;
 }
-main .big-circle {
+main .container .big-circle {
   width: 340px;
   height: 340px;
   border-radius: 50%;
@@ -72,7 +72,7 @@ main .big-circle {
   margin: 10px;
   margin-left: 50px;
 }
-main .big-circle h1 {
+main .container .big-circle h1 {
   color: #E6FF94;
   line-height: 40px;
   font-size: 40px;
@@ -81,7 +81,7 @@ main .big-circle h1 {
   margin: auto 60px;
   margin-top: 93px;
 }
-main .big-circle .small-circle {
+main .container .big-circle .small-circle {
   width: 130px;
   height: 130px;
   border-radius: 50%;
@@ -93,7 +93,7 @@ main .big-circle .small-circle {
   margin-top: 10px;
   animation: rotate 4s linear infinite;
 }
-main .big-circle .small-circle h2 {
+main .container .big-circle .small-circle h2 {
   color: #E6FF94;
   line-height: 14px;
   font-size: 14px;
@@ -103,7 +103,7 @@ main .big-circle .small-circle h2 {
   justify-content: center;
   text-align: center;
 }
-main .top-circle {
+main .container .top-circle {
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -113,7 +113,7 @@ main .top-circle {
   margin-top: 32px;
   animation: pulse 10s infinite;
 }
-main .top-circle h3 {
+main .container .top-circle h3 {
   color: #006769;
   line-height: 14px;
   font-size: 14px;
@@ -123,9 +123,8 @@ main .top-circle h3 {
 }
 main .calculate {
   width: 480px;
-  height: 80hv;
+  height: 80vh;
   background-color: #A5DD9B;
-  margin: auto;
 }
 main .calculate h2 {
   font-size: 20px;
@@ -207,8 +206,8 @@ main .calculate .top-circle {
   border-radius: 50%;
   background-color: #A5DD9B;
   border: 6px solid #40A578;
-  margin-left: 54px;
-  margin-top: 72px;
+  margin-left: 62px;
+  margin-top: 52px;
   animation: pulse 10s infinite;
 }
 main .calculate .top-circle h3 {
@@ -371,7 +370,7 @@ main .resources .resourceList ul li a:hover {
     justify-content: center;
   }
   main .container {
-    height: 100hv;
+    height: 100vh;
     margin-bottom: 10rem;
   }
   main .container .big-circle {
@@ -421,7 +420,7 @@ main .resources .resourceList ul li a:hover {
   }
   main .calculate {
     width: 1260px;
-    height: 100hv;
+    height: 100vh;
   }
   main .calculate h2 {
     font-size: 48px;
@@ -465,7 +464,7 @@ main .resources .resourceList ul li a:hover {
     background-color: #40A578;
     border: 6px solid #A5DD9B;
     margin-left: 130px;
-    margin-top: -85px;
+    margin-top: -110px;
     animation: pulse 10s infinite;
   }
   main .calculate .top-circle h3 {
@@ -474,13 +473,13 @@ main .resources .resourceList ul li a:hover {
     font-size: 26px;
     font-family: "Ubuntu Mono", monospace;
     margin-top: 72px;
-    margin-left: 14px;
+    margin-left: 2px;
   }
   main .greenCheck {
-    height: 66vh;
+    height: 100vh;
   }
   main .greenCheck h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: "Ubuntu Mono", monospace;
     display: flex;
     justify-content: center;
@@ -488,13 +487,11 @@ main .resources .resourceList ul li a:hover {
     color: #E6FF94;
     font-weight: 500;
     margin: auto;
-  }
-  main .greenCheck h2 br {
-    display: none;
+    margin-top: 10rem;
   }
   main .greenCheck p {
     font-family: "Ubuntu Mono", monospace;
-    font-size: 16px;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -504,8 +501,8 @@ main .resources .resourceList ul li a:hover {
     margin-top: 50px;
   }
   main .greenCheck input {
-    width: 272px;
-    height: 25px;
+    width: 680px;
+    height: 40px;
     border-radius: 77px;
     border: none;
     display: flex;
@@ -531,8 +528,8 @@ main .resources .resourceList ul li a:hover {
     text-align: center;
   }
   main .greenCheck button {
-    width: 108px;
-    height: 25px;
+    width: 234px;
+    height: 40px;
     border-radius: 77px;
     border: none;
     display: flex;
@@ -548,58 +545,57 @@ main .resources .resourceList ul li a:hover {
     color: #40A578;
   }
   main .greenCheck .top-circle {
-    width: 80px;
-    height: 80px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     background-color: #A5DD9B;
     border: 6px solid #40A578;
-    margin-left: 62px;
-    margin-top: 4rem;
-    margin-bottom: -20px;
+    margin-left: 126px;
+    margin-top: 220px;
     animation: pulse 10s infinite;
   }
   main .greenCheck .top-circle h3 {
     color: #006769;
-    line-height: 14px;
-    font-size: 14px;
+    line-height: 26px;
+    font-size: 26px;
     font-family: "Ubuntu Mono", monospace;
-    margin-top: 32px;
+    margin-top: 82px;
     margin-left: 4px;
     display: flex;
     justify-content: center;
     text-align: center;
   }
-  main .greenCheck .resources {
-    height: 100hv;
+  main .resources {
+    background-color: #A5DD9B;
   }
-  main .greenCheck .resources h2 {
+  main .resources h2 {
     color: #006769;
     font-size: 4rem;
     margin-left: 3rem;
-    margin-top: 5rem;
+    margin-top: 115px;
   }
-  main .greenCheck .resources p {
+  main .resources p {
     color: #006769;
-    font-size: 1rem;
-    line-height: 1rem;
+    font-size: 2rem;
+    line-height: 2rem;
     margin-left: 3rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
-  main .greenCheck .resources .resourceList {
+  main .resources .resourceList {
     margin-top: 2rem;
   }
-  main .greenCheck .resources .resourceList ul {
+  main .resources .resourceList ul {
     color: #006769;
     margin-top: 3rem;
     margin-left: 3rem;
   }
-  main .greenCheck .resources .resourceList ul li {
+  main .resources .resourceList ul li {
     margin-bottom: 2rem;
     margin-left: 2rem;
   }
-  main .greenCheck .resources .resourceList ul li a {
+  main .resources .resourceList ul li a {
     color: #006769;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 2rem;
   }
 }
