@@ -57,9 +57,6 @@ nav a:hover {
   color: #FFFFFF;
 }
 
-main {
-  /* Media Queries */
-}
 main .container {
   display: flex;
   justify-content: center;
@@ -126,7 +123,7 @@ main .top-circle h3 {
 }
 main .calculate {
   width: 480px;
-  height: 480px;
+  height: 80hv;
   background-color: #A5DD9B;
   margin: auto;
 }
@@ -211,7 +208,7 @@ main .calculate .top-circle {
   background-color: #A5DD9B;
   border: 6px solid #40A578;
   margin-left: 54px;
-  margin-top: 52px;
+  margin-top: 72px;
   animation: pulse 10s infinite;
 }
 main .calculate .top-circle h3 {
@@ -224,6 +221,9 @@ main .calculate .top-circle h3 {
   display: flex;
   justify-content: center;
   text-align: center;
+}
+main .greenCheck {
+  height: 66vh;
 }
 main .greenCheck h2 {
   font-size: 2rem;
@@ -300,8 +300,9 @@ main .greenCheck .top-circle {
   border-radius: 50%;
   background-color: #A5DD9B;
   border: 6px solid #40A578;
-  margin-left: 54px;
-  margin-top: 52px;
+  margin-left: 62px;
+  margin-top: 4rem;
+  margin-bottom: -20px;
   animation: pulse 10s infinite;
 }
 main .greenCheck .top-circle h3 {
@@ -338,13 +339,8 @@ main .resources .resourceList {
 main .resources .resourceList ul {
   color: #006769;
   margin-top: 3rem;
-  margin-left: 5.5rem;
+  margin-left: 3rem;
   padding: 0;
-}
-@media (max-width: 768px) {
-  main .resources .resourceList ul {
-    margin-left: 2rem;
-  }
 }
 main .resources .resourceList ul li {
   margin-bottom: 2rem;
@@ -358,19 +354,25 @@ main .resources .resourceList ul li a {
 main .resources .resourceList ul li a:hover {
   text-decoration: underline;
 }
+
+/* Media Queries */
 @media (min-width: 1200px) {
-  main header {
+  header {
     width: 1250px;
     padding: 0 20px;
     margin: -16px;
   }
-  main header nav {
+  header nav {
     font-size: 16px;
   }
-  main header ul {
+  header ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  main .container {
+    height: 100hv;
+    margin-bottom: 10rem;
   }
   main .container .big-circle {
     width: 540px;
@@ -402,10 +404,10 @@ main .resources .resourceList ul li a:hover {
     font-weight: 300;
   }
   main .container .top-circle {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     margin-left: -230px;
-    margin-top: 245px;
+    margin-top: 34px;
     background-color: #A5DD9B;
   }
   main .container .top-circle h3 {
@@ -415,13 +417,11 @@ main .resources .resourceList ul li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 90px;
+    margin-top: 85px;
   }
   main .calculate {
     width: 1260px;
-    height: 650px;
-    margin: auto;
-    margin-top: 380px;
+    height: 100hv;
   }
   main .calculate h2 {
     font-size: 48px;
@@ -456,15 +456,16 @@ main .resources .resourceList ul li a:hover {
     border-radius: 77px;
     margin: auto;
     font-size: 16px;
+    margin-bottom: 30px;
   }
   main .calculate .top-circle {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     background-color: #40A578;
     border: 6px solid #A5DD9B;
     margin-left: 130px;
-    margin-top: -35px;
+    margin-top: -85px;
     animation: pulse 10s infinite;
   }
   main .calculate .top-circle h3 {
@@ -473,118 +474,132 @@ main .resources .resourceList ul li a:hover {
     font-size: 26px;
     font-family: "Ubuntu Mono", monospace;
     margin-top: 72px;
-    margin-left: 63px;
+    margin-left: 14px;
   }
   main .greenCheck {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #40A578;
-    align-items: center;
-    padding: 1rem;
-    text-align: center;
-    margin-bottom: -10rem;
+    height: 66vh;
   }
   main .greenCheck h2 {
-    color: #E6FF94;
     font-size: 2rem;
+    font-family: "Ubuntu Mono", monospace;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #E6FF94;
+    font-weight: 500;
+    margin: auto;
+  }
+  main .greenCheck h2 br {
+    display: none;
+  }
+  main .greenCheck p {
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: 400;
+    margin-left: 35px;
     margin-top: 50px;
   }
-}
-@media (min-width: 1200px) and (max-width: 768px) {
-  main .greenCheck h2 {
-    margin-top: -25rem;
-  }
-}
-@media (min-width: 1200px) {
-  main .greenCheck p {
-    color: #E6FF94;
-    margin-bottom: 2.5rem;
-    font-size: 1rem;
-  }
-}
-@media (min-width: 1200px) and (max-width: 768px) {
-  main .greenCheck p {
-    color: #A5DD9B;
-  }
-}
-@media (min-width: 1200px) {
-  main .greenCheck form {
+  main .greenCheck input {
+    width: 272px;
+    height: 25px;
+    border-radius: 77px;
+    border: none;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     align-items: center;
-  }
-  main .greenCheck form #website-url {
-    padding: 10px;
     background-color: #A5DD9B;
-    border: 1px solid #40A578;
-    border-radius: 3rem;
-    margin-bottom: 2rem;
     color: #006769;
-    font-family: "Ubuntu Mono", monospace;
-    width: 700px;
-    height: 20px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
-  main .greenCheck form #website-url::-moz-placeholder {
-    font-size: 16px;
+  main .greenCheck input::-moz-placeholder {
+    font-size: 1rem;
     font-family: "Ubuntu Mono", monospace;
     color: #006769;
     text-align: center;
   }
-  main .greenCheck form #website-url::placeholder {
-    font-size: 16px;
+  main .greenCheck input::placeholder {
+    font-size: 1rem;
     font-family: "Ubuntu Mono", monospace;
     color: #006769;
     text-align: center;
   }
-  main .greenCheck form #website-url:focus {
-    border-color: #E6FF94;
-    outline: none;
+  main .greenCheck button {
+    width: 108px;
+    height: 25px;
+    border-radius: 77px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A5DD9B;
+    color: #006769;
+    margin: auto;
+    font-size: 12px;
   }
-}
-@media (min-width: 1200px) and (max-width: 768px) {
-  main .greenCheck form #website-url {
-    width: 267px;
-    height: 5px;
+  main .greenCheck button:hover {
+    background-color: #E6FF94;
+    color: #40A578;
   }
-}
-@media (min-width: 1200px) {
-  main .greenCheck .res-circle {
+  main .greenCheck .top-circle {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     background-color: #A5DD9B;
     border: 6px solid #40A578;
-    margin-left: -34px;
-    margin-top: -5rem;
+    margin-left: 62px;
+    margin-top: 4rem;
+    margin-bottom: -20px;
     animation: pulse 10s infinite;
   }
-  main .greenCheck .res-circle h3 {
+  main .greenCheck .top-circle h3 {
     color: #006769;
     line-height: 14px;
     font-size: 14px;
     font-family: "Ubuntu Mono", monospace;
-    margin-top: 35px;
-    margin-left: 8px;
+    margin-top: 32px;
+    margin-left: 4px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
   }
-}
-@media (min-width: 1200px) and (min-width: 1200px) {
-  main .greenCheck .res-circle {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-left: -60rem;
-    margin-top: 245px;
-    background-color: #A5DD9B;
+  main .greenCheck .resources {
+    height: 100hv;
   }
-  main .greenCheck .res-circle h3 {
-    line-height: 24px;
-    font-size: 24px;
-    margin-top: 190px;
+  main .greenCheck .resources h2 {
+    color: #006769;
+    font-size: 4rem;
+    margin-left: 3rem;
+    margin-top: 5rem;
   }
-  main .greenCheck .res-circle h3 {
-    line-height: 24px;
-    font-size: 24px;
-    margin-top: 93px;
+  main .greenCheck .resources p {
+    color: #006769;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-left: 3rem;
+    margin-top: 5rem;
+  }
+  main .greenCheck .resources .resourceList {
+    margin-top: 2rem;
+  }
+  main .greenCheck .resources .resourceList ul {
+    color: #006769;
+    margin-top: 3rem;
+    margin-left: 3rem;
+  }
+  main .greenCheck .resources .resourceList ul li {
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+  }
+  main .greenCheck .resources .resourceList ul li a {
+    color: #006769;
+    text-decoration: none;
+    font-size: 1rem;
   }
 }
