@@ -1,0 +1,354 @@
+@import './helpers/variables';
+@import './helpers/mixin';
+@import './helpers/animations';
+@import './components/greencheck';
+@import './components/resourses';
+
+
+body{
+    background-color: $main_color;
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+}
+header{
+    background-color: $light_color;
+    width:483px;
+    height: 80px;
+    margin: $margin;
+    margin-top: -14px;
+}
+nav{
+    font-size: $font-size;
+    font-weight: $font-weight;
+    font-family: $font-family;
+    ul li{
+        display: inline-flex;
+        justify-content: row;
+    } a{
+        text-decoration: none;
+         margin-top: 30px;
+         margin-left: 15px;
+         &:hover{
+            color: $white_color;
+         }
+    }
+}
+main{
+    .container {
+        @include display-main;
+        height: 100vh;
+    }
+    .big-circle{
+        width:340px;
+        height: 340px;
+        border-radius: $border-radius;
+        background-color: $main_color;
+        border: 3px solid $accent_color;
+        margin: 10px ;
+        margin-left: 50px;
+
+     h1{
+        color: $accent_color;
+            line-height: 40px;
+            font-size: 40px;
+            font-family: $font-family;
+            font-weight: $font-weight;
+            margin: auto 60px;
+            margin-top: 93px;
+        }
+        .small-circle{
+            width:130px;
+            height:130px;
+            border-radius: $border-radius;
+            background-color: $main_color;
+            border: 3px solid $accent_color;
+            @include display-flex;
+            margin-left: 200px;
+            margin-top: 10px;
+            animation: rotate 4s linear  infinite;
+        h2{
+            color: $accent_color;
+            line-height: $line-height;
+            font-size: $font-size;
+            font-family: $font-family;
+            margin: $margin;
+            @include display-flex;
+            text-align: center;
+        }
+        }
+        }
+    .top-circle{
+        width:80px;
+        height:80px;
+        border-radius: $border-radius;
+        background-color: $light_color;
+        border:6px solid $main_color;
+        margin-left: -34px;
+        margin-top:-22px;
+        h3{
+            color: $text_color;
+            line-height: $line-height;
+            font-size: $font-size;
+            font-family: $font-family;
+            margin-top: 35px;
+            margin-left: 8px;
+        }
+        animation: pulse 10s infinite;
+    }
+}
+
+ .calculate {
+     width:480px;
+     height: 480px;
+    
+    background-color:$light_color;
+    // margin: $margin;
+    h2{
+        font-size: 20px;
+        font-family: $font-family;
+        @include display-main;
+        color: $main_color;
+        font-weight: 200;
+        padding-top: 110px;
+    }
+    p{ font-size: 20px;
+        font-family: $font-family;
+        @include display-text-center;
+        color: $text_color;
+        font-weight: $font-weight;
+        margin-left: 35px;
+    }
+    p.text{
+        @include display-text-center;
+        font-size: 11px;
+        font-family: $font-family;
+        color: $text_color;
+        font-weight: $font-weight;
+        line-height: 15px;
+    }
+    input {
+            width: 272px;
+            height: 25px;
+            border-radius: 77px;
+            border: none;
+            @include display-text-center;
+            align-items: center;
+            background-color: $main_color;
+            color: $white_color;
+            margin: $margin;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            &::placeholder {
+                font-size: 1rem;
+                font-family: $font-family;
+                color: $white_color;
+                text-align: center;
+            }
+        }
+    button{
+        width: 108px;
+        height: 25px;
+        border-radius: 77px;
+        border: none;
+        @include display-main;
+        background-color: $main_color;
+        color: $white_color;
+        margin: $margin;
+        font-size: 12px;
+        &:hover{
+        background-color: #E6FF94;
+        color: $main_color;
+        }
+    }
+    .top-circle{
+        width:80px;
+        height:80px;
+        border-radius: $border-radius;
+        background-color: $main_color;
+        border:6px solid $light_color;
+        margin-left: 60px;
+        margin-top:60px;
+        h3{
+            color: $light_color;
+            line-height: $line-height;
+            font-size: $font-size;
+            font-family: $font-family;
+             margin-top: 28px;
+             margin-left: 22px;
+            // display: center;
+            // justify-content: center;
+            // text-align: center;
+            // align-items: center;
+        }
+        animation: pulse 10s infinite;
+        
+    }
+}
+
+// .footer{
+//         width: 500px;
+//         height: 1800px;
+//         .fot{
+//             .huge_circle{
+//                 width:80px;
+//                 height: 80px;
+//                 border-radius: $border-radius;
+//                 background-color: $main_color;
+//                 border: 3px solid $accent_color;
+//                 margin-left: 320px;
+//                 margin-top: 120px;
+
+//              h2{
+//                 color: $accent_color;
+//                 font-family: $font-family;
+//                 font-weight: 100;
+//                     line-height: 16px;
+//                     font-size: 16px;
+//                     font-family: $font-family;
+//                     margin: auto;
+//                     margin-top: 23px;
+//                     margin-left: 10px;
+//                     span{
+//                         color: $white_color;
+//                     }
+//                 }
+//                 .small-circle{
+//                     width:26px;
+//                     height:26px;
+//                     border-radius: $border-radius;
+//                     background-color: $main_color;
+//                     border: 3px solid $accent_color;
+//                     @include display-flex;
+//                     margin-left: 55px;
+//                     margin-top: -2px;
+
+
+//         }
+//     }
+//         }
+
+//     }
+
+
+
+
+
+/* Media Queries */
+@media (min-width: 1200px) {
+    header {
+        width: 1250px;
+        padding: 0 20px;
+        margin: -16px;
+     nav{
+        font-size: 16px;
+     } ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.container{
+    .big-circle {
+        width:540px;
+        height: 540px;
+        border-radius: $border-radius;
+        margin: $margin;
+        margin-top: 70px;
+        h1{
+            line-height: 85px;
+            font-size: 85px;
+            font-family: $font-family;
+            font-weight: $font-weight;
+            margin: auto -128px;
+            margin-top: 26px;
+        }
+        .small-circle {
+            width:246px;
+            height:246px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            margin-left: 350px;
+            margin-top: -80px;
+        h2{
+            line-height:24px;
+            font-size: 24px;
+            font-weight: 300;
+        }
+    }
+    }
+    .top-circle{
+        width:200px;
+        height:200px;
+        margin-left: -230px;
+        margin-top:145px;
+        background-color: $light_color;
+        h3{
+            line-height: 24px;
+            font-size: 24px;
+           @include display-main;
+            text-align: center;
+            margin-top: 90px;
+        }
+    }
+}
+.calculate {
+    width:1260px;
+    height: 650px;
+    margin:$margin;
+    margin-top: 380px;
+    h2{
+        font-size: 48px;
+        padding-top: 110px;
+    }
+    p{ font-size: 38px;
+        font-family: $font-family;
+        margin-left: 35px;
+    }
+    p.text{
+        font-size: 20px;
+        line-height: 20px;
+       @include display-text-center;
+       margin-bottom: 30px;
+    }
+    input {
+        width: 680px;
+        height: 40px;
+        @include display-text-center;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    button{
+    width: 234px;
+    height: 40px;
+    border-radius: 77px;
+    margin: $margin;
+    font-size: 16px;
+}
+.top-circle{
+    width:200px;
+    height:200px;
+    border-radius: $border-radius;
+    background-color: $main_color;
+    border:6px solid $light_color;
+    margin-left: 130px;
+    margin-top:-35px;
+    h3{
+        color:$light_color;
+        line-height: 26px;
+        font-size: 26px;
+        font-family: $font-family;
+         margin-top: 72px;
+         margin-left: 63px;
+        // display: center;
+        // justify-content: center;
+        // text-align: center;
+        // align-items: center;
+    }
+    animation: pulse 10s infinite;
+}
+}
+}

@@ -1,0 +1,88 @@
+//*HELPERS
+@import '../helpers/variables';
+
+.resources {
+    position: relative;
+    background-color: $light-green;
+    padding: 1rem;
+    height: 100vh;
+    overflow: hidden;
+
+    h2 {
+        color: $secondary-green;
+        font-size: 4rem;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        margin-left: 0;
+
+        @media (max-width: 768px) {
+            margin-top: 10rem;
+            font-size: 2.5rem;
+            margin-left: 1rem;
+        }
+    }
+
+    p {
+        color: $secondary-green;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-left: 5rem;
+
+        @media (max-width: 768px) {
+            font-size: 1rem;
+            margin-left: 1rem;
+        }
+
+        a {
+            color: $secondary-green;
+            text-decoration: none;
+            font-weight: bold;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .resourceList {
+        margin-top: 2rem;
+
+        ul {
+            color: $secondary-green;
+            margin-top: 3rem;
+            margin-left: 5.5rem;
+            padding: 0;
+
+            @media (max-width: 768px) {
+                margin-left: 2rem;
+            }
+        }
+
+        ul li {
+            margin-bottom: 2rem;
+
+            a {
+                color: $secondary-green;
+                text-decoration: none;
+                font-size: 1rem;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .bigCircle {
+        position: absolute;
+        top: 100px;
+        right: -200px;
+        width: 1000px;
+        height: 1000px;
+        border: 2px solid $secondary-green;
+        border-radius: 50%;
+
+            @media (max-width: 768px) {
+            display: none;
+        }
+    }
+}

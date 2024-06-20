@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate(5px) rotate(0deg);
+  }
+  50% {
+    transform: rotate(45deg) translate(10px) rotate(-45deg);
+  }
+  100% {
+    transform: rotate(90deg) translate(10px) rotate(-90deg);
+  }
+  0% {
+    transform: rotate(90deg) translate(10px) rotate(-90deg);
+  }
+}
+body {
+  background-color: #40A578;
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu Mono", monospace;
+}
+
+header {
+  background-color: #A5DD9B;
+  width: 483px;
+  height: 80px;
+  margin: auto;
+  margin-top: -14px;
+}
+
+nav {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Ubuntu Mono", monospace;
+}
+nav ul li {
+  display: inline-flex;
+  justify-content: row;
+}
+nav a {
+  text-decoration: none;
+  margin-top: 30px;
+  margin-left: 15px;
+}
+nav a:hover {
+  color: #FFFFFF;
+}
+
+main .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+main .big-circle {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background-color: #40A578;
+  border: 3px solid #E6FF94;
+  margin: 10px;
+  margin-left: 50px;
+}
+main .big-circle h1 {
+  color: #E6FF94;
+  line-height: 40px;
+  font-size: 40px;
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+  margin: auto 60px;
+  margin-top: 93px;
+}
+main .big-circle .small-circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #40A578;
+  border: 3px solid #E6FF94;
+  display: flex;
+  justify-content: center;
+  margin-left: 200px;
+  margin-top: 10px;
+  animation: rotate 4s linear infinite;
+}
+main .big-circle .small-circle h2 {
+  color: #E6FF94;
+  line-height: 14px;
+  font-size: 14px;
+  font-family: "Ubuntu Mono", monospace;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+main .top-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #A5DD9B;
+  border: 6px solid #40A578;
+  margin-left: -34px;
+  margin-top: -22px;
+  animation: pulse 10s infinite;
+}
+main .top-circle h3 {
+  color: #006769;
+  line-height: 14px;
+  font-size: 14px;
+  font-family: "Ubuntu Mono", monospace;
+  margin-top: 35px;
+  margin-left: 8px;
+}
+
+.calculate {
+  width: 480px;
+  height: 480px;
+  background-color: #A5DD9B;
+}
+.calculate h2 {
+  font-size: 20px;
+  font-family: "Ubuntu Mono", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #40A578;
+  font-weight: 200;
+  padding-top: 110px;
+}
+.calculate p {
+  font-size: 20px;
+  font-family: "Ubuntu Mono", monospace;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #006769;
+  font-weight: 400;
+  margin-left: 35px;
+}
+.calculate p.text {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 11px;
+  font-family: "Ubuntu Mono", monospace;
+  color: #006769;
+  font-weight: 400;
+  line-height: 15px;
+}
+.calculate input {
+  width: 272px;
+  height: 25px;
+  border-radius: 77px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: #40A578;
+  color: #FFFFFF;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.calculate input::-moz-placeholder {
+  font-size: 1rem;
+  font-family: "Ubuntu Mono", monospace;
+  color: #FFFFFF;
+  text-align: center;
+}
+.calculate input::placeholder {
+  font-size: 1rem;
+  font-family: "Ubuntu Mono", monospace;
+  color: #FFFFFF;
+  text-align: center;
+}
+.calculate button {
+  width: 108px;
+  height: 25px;
+  border-radius: 77px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #40A578;
+  color: #FFFFFF;
+  margin: auto;
+  font-size: 12px;
+}
+.calculate button:hover {
+  background-color: #E6FF94;
+  color: #40A578;
+}
+.calculate .top-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #40A578;
+  border: 6px solid #A5DD9B;
+  margin-left: 60px;
+  margin-top: 60px;
+  animation: pulse 10s infinite;
+}
+.calculate .top-circle h3 {
+  color: #A5DD9B;
+  line-height: 14px;
+  font-size: 14px;
+  font-family: "Ubuntu Mono", monospace;
+  margin-top: 28px;
+  margin-left: 22px;
+}
+
+/* Media Queries */
+@media (min-width: 1200px) {
+  header {
+    width: 1250px;
+    padding: 0 20px;
+    margin: -16px;
+  }
+  header nav {
+    font-size: 16px;
+  }
+  header ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container .big-circle {
+    width: 540px;
+    height: 540px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 70px;
+  }
+  .container .big-circle h1 {
+    line-height: 85px;
+    font-size: 85px;
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 400;
+    margin: auto -128px;
+    margin-top: 26px;
+  }
+  .container .big-circle .small-circle {
+    width: 246px;
+    height: 246px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    margin-left: 350px;
+    margin-top: -80px;
+  }
+  .container .big-circle .small-circle h2 {
+    line-height: 24px;
+    font-size: 24px;
+    font-weight: 300;
+  }
+  .container .top-circle {
+    width: 200px;
+    height: 200px;
+    margin-left: -230px;
+    margin-top: 145px;
+    background-color: #A5DD9B;
+  }
+  .container .top-circle h3 {
+    line-height: 24px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 90px;
+  }
+  .calculate {
+    width: 1260px;
+    height: 650px;
+    margin: auto;
+    margin-top: 380px;
+  }
+  .calculate h2 {
+    font-size: 48px;
+    padding-top: 110px;
+  }
+  .calculate p {
+    font-size: 38px;
+    font-family: "Ubuntu Mono", monospace;
+    margin-left: 35px;
+  }
+  .calculate p.text {
+    font-size: 20px;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .calculate input {
+    width: 680px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  .calculate button {
+    width: 234px;
+    height: 40px;
+    border-radius: 77px;
+    margin: auto;
+    font-size: 16px;
+  }
+  .calculate .top-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #40A578;
+    border: 6px solid #A5DD9B;
+    margin-left: 130px;
+    margin-top: -35px;
+    animation: pulse 10s infinite;
+  }
+  .calculate .top-circle h3 {
+    color: #A5DD9B;
+    line-height: 26px;
+    font-size: 26px;
+    font-family: "Ubuntu Mono", monospace;
+    margin-top: 72px;
+    margin-left: 63px;
+  }
+}
