@@ -110,7 +110,7 @@ main .top-circle {
   background-color: #A5DD9B;
   border: 6px solid #40A578;
   margin-left: -34px;
-  margin-top: -22px;
+  margin-top: 32px;
   animation: pulse 10s infinite;
 }
 main .top-circle h3 {
@@ -268,7 +268,7 @@ main .top-circle h3 {
     width: 200px;
     height: 200px;
     margin-left: -230px;
-    margin-top: 145px;
+    margin-top: 245px;
     background-color: #A5DD9B;
   }
   .container .top-circle h3 {

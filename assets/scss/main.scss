@@ -1,8 +1,7 @@
 @import './helpers/variables';
 @import './helpers/mixin';
 @import './helpers/animations';
-@import './components/greencheck';
-@import './components/resourses';
+
 
 
 body{
@@ -85,7 +84,7 @@ main{
         background-color: $light_color;
         border:6px solid $main_color;
         margin-left: -34px;
-        margin-top:-22px;
+        margin-top:32px;
         h3{
             color: $text_color;
             line-height: $line-height;
@@ -186,52 +185,6 @@ main{
     }
 }
 
-// .footer{
-//         width: 500px;
-//         height: 1800px;
-//         .fot{
-//             .huge_circle{
-//                 width:80px;
-//                 height: 80px;
-//                 border-radius: $border-radius;
-//                 background-color: $main_color;
-//                 border: 3px solid $accent_color;
-//                 margin-left: 320px;
-//                 margin-top: 120px;
-
-//              h2{
-//                 color: $accent_color;
-//                 font-family: $font-family;
-//                 font-weight: 100;
-//                     line-height: 16px;
-//                     font-size: 16px;
-//                     font-family: $font-family;
-//                     margin: auto;
-//                     margin-top: 23px;
-//                     margin-left: 10px;
-//                     span{
-//                         color: $white_color;
-//                     }
-//                 }
-//                 .small-circle{
-//                     width:26px;
-//                     height:26px;
-//                     border-radius: $border-radius;
-//                     background-color: $main_color;
-//                     border: 3px solid $accent_color;
-//                     @include display-flex;
-//                     margin-left: 55px;
-//                     margin-top: -2px;
-
-
-//         }
-//     }
-//         }
-
-//     }
-
-
-
 
 
 /* Media Queries */
@@ -283,8 +236,8 @@ main{
         width:200px;
         height:200px;
         margin-left: -230px;
-        margin-top:145px;
-        background-color: $light_color;
+        margin-top:245px;
+        background-color:$light_color;
         h3{
             line-height: 24px;
             font-size: 24px;
