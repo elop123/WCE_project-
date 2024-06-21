@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WCE Project</title>
     <link rel="stylesheet" href="assets/scss/main.css">
-    <script src= "assets/js/script.js" type="module" defer></script>
-  <script src="assets/js/script2.js"></script>
+    <script defer src="/assets/js/script.js"></script>
 </head>
 <body>
  <header>
@@ -34,16 +33,14 @@
                  in the field below and hit calculate</p>
                 <input type="text" id="website" name="website" placeholder="www.mywebsite.com" >
                 <button type="button" id="calculateButton">CALCULATE</button>
-                <p id="result"></p>
+                <div id="co2IntensityResult"></div>
             <div class="top-circle"><h3>GREEN<br>CHECK</h3></div>
         </section>
         <section class="greenCheck" id="greenCheck">
-            <h2> We love green energy and renewable<br>energy sources. Does your provider?</h2>
-            <p>Enter a website URL in the field below to look check if the site providers <br> use green and renewable energy sources for hosting.</p>
-           
-                <input type="text" id="website-url" name="website-url" placeholder="www.website.com" required>
-                <button type="button">BEGIN</button>
-            
+            <h2>We love green energy and renewable<br>energy sources. Does your provider?</h2>
+            <p>Enter a website URL in the field below to check if the site providers <br> use green and renewable energy sources for hosting.</p>
+            <input type="text" id="website-url" name="website-url" placeholder="www.website.com" required>
+            <button type="button" id="greenCheckButton">BEGIN</button>
             <div id="api-result"></div>
             <div class="top-circle"><h3>RESOURCES</h3></div>
         </section> 
