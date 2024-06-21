@@ -62,6 +62,7 @@ main .container {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100vw;
 }
 main .container .big-circle {
   width: 340px;
@@ -122,7 +123,6 @@ main .container .top-circle h3 {
   margin-left: 8px;
 }
 main .calculate {
-  width: 480px;
   height: 80vh;
   background-color: #A5DD9B;
 }
@@ -150,11 +150,11 @@ main .calculate p.text {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-size: 11px;
+  font-size: 13px;
   font-family: "Ubuntu Mono", monospace;
   color: #006769;
   font-weight: 400;
-  line-height: 15px;
+  line-height: 13px;
 }
 main .calculate input {
   width: 272px;
@@ -195,6 +195,7 @@ main .calculate button {
   color: #FFFFFF;
   margin: auto;
   font-size: 12px;
+  cursor: pointer;
 }
 main .calculate button:hover {
   background-color: #E6FF94;
@@ -204,14 +205,14 @@ main .calculate .top-circle {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: #A5DD9B;
-  border: 6px solid #40A578;
+  background-color: #40A578;
+  border: 6px solid #A5DD9B;
   margin-left: 62px;
-  margin-top: 52px;
+  margin-top: 72px;
   animation: pulse 10s infinite;
 }
 main .calculate .top-circle h3 {
-  color: #006769;
+  color: #A5DD9B;
   line-height: 14px;
   font-size: 14px;
   font-family: "Ubuntu Mono", monospace;
@@ -222,10 +223,10 @@ main .calculate .top-circle h3 {
   text-align: center;
 }
 main .greenCheck {
-  height: 66vh;
+  height: 65vh;
 }
 main .greenCheck h2 {
-  font-size: 2rem;
+  font-size: 24px;
   font-family: "Ubuntu Mono", monospace;
   display: flex;
   justify-content: center;
@@ -288,6 +289,7 @@ main .greenCheck button {
   color: #006769;
   margin: auto;
   font-size: 12px;
+  cursor: pointer;
 }
 main .greenCheck button:hover {
   background-color: #E6FF94;
@@ -300,7 +302,7 @@ main .greenCheck .top-circle {
   background-color: #A5DD9B;
   border: 6px solid #40A578;
   margin-left: 62px;
-  margin-top: 4rem;
+  margin-top: 80px;
   margin-bottom: -20px;
   animation: pulse 10s infinite;
 }
@@ -316,7 +318,7 @@ main .greenCheck .top-circle h3 {
   text-align: center;
 }
 main .resources {
-  height: 100vh;
+  height: 80vh;
   background-color: #A5DD9B;
 }
 main .resources h2 {
@@ -342,7 +344,7 @@ main .resources .resourceList ul {
   padding: 0;
 }
 main .resources .resourceList ul li {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   margin-left: 2rem;
 }
 main .resources .resourceList ul li a {
@@ -353,18 +355,39 @@ main .resources .resourceList ul li a {
 main .resources .resourceList ul li a:hover {
   text-decoration: underline;
 }
-
+main .resources .top-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #40A578;
+  border: 6px solid #A5DD9B;
+  margin-left: 62px;
+  margin-top: 52px;
+  animation: pulse 10s infinite;
+}
+main .resources .top-circle h3 {
+  color: #A5DD9B;
+  line-height: 14px;
+  font-size: 14px;
+  font-family: "Ubuntu Mono", monospace;
+  margin-top: 25px;
+  margin-left: 4px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
 main .content {
   height: 100vh;
   margin-bottom: -13rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 main .content h1 {
   margin-left: 3rem;
-  margin-top: 3rem;
+  margin-top: 4rem;
   line-height: 2rem;
   font-size: 2rem;
   color: #E6FF94;
+  font-weight: 300;
 }
 main .content p {
   color: #FFFFFF;
@@ -372,10 +395,12 @@ main .content p {
   line-height: 1rem;
   margin-left: 3rem;
   margin-top: 3rem;
+  margin-right: 3rem;
 }
 
 .footer {
   padding: 20px;
+  margin-top: 5rem;
   color: #FFFFFF;
   background-color: #40A578;
 }
@@ -438,15 +463,16 @@ main .content p {
   text-align: left;
   margin-left: 1rem;
   color: #E6FF94;
-  margin: 0;
+  margin: auto;
+  line-height: 14px;
 }
 .footer .footer-logo .huge_circle h2 span {
-  font-size: 14px;
+  font-size: 16px;
   color: #FFFFFF;
 }
 .footer .footer-logo .huge_circle .small-circle {
   position: absolute;
-  bottom: -15px;
+  bottom: -10px;
   right: -15px;
   width: 40px;
   height: 40px;
@@ -456,6 +482,22 @@ main .content p {
 }
 
 /* Media Queries */
+@media (max-width: 767px) {
+  .footer-container .newsletter {
+    align-items: center;
+    flex-direction: column;
+  }
+  .footer-container .newsletter h4 {
+    display: none;
+  }
+  .footer-container .newsletter p, .footer-container .newsletter .newsletter-input, .footer-container .newsletter .newsletter-submit {
+    margin-bottom: 10px;
+  }
+  .footer-container p {
+    display: block;
+    font-size: small;
+  }
+}
 @media (min-width: 1200px) {
   header {
     width: 1250px;
@@ -698,22 +740,6 @@ main .content p {
     color: #006769;
     text-decoration: none;
     font-size: 2rem;
-  }
-}
-@media (max-width: 767px) {
-  .footer-container .newsletter {
-    align-items: center;
-    flex-direction: column;
-  }
-  .footer-container .newsletter h4 {
-    display: none;
-  }
-  .footer-container .newsletter p, .footer-container .newsletter .newsletter-input, .footer-container .newsletter .newsletter-submit {
-    margin-bottom: 10px;
-  }
-  .footer-container p {
-    display: block;
-    font-size: small;
   }
 }
 @media (min-width: 1200px) {

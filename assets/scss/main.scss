@@ -38,6 +38,7 @@ main{
     .container {
         @include display-main;
         height: 100vh;
+        width: 100vw;
     .big-circle{
         width:340px;
         height: 340px;
@@ -95,7 +96,7 @@ main{
         animation: pulse 10s infinite;
     }}
     .calculate {
-        width:480px;
+        //width:480px;
         height: 80vh;
         background-color:$light_color;
        h2{
@@ -115,11 +116,11 @@ main{
        }
        p.text{
            @include display-text-center;
-           font-size: 11px;
+           font-size: 13px;
            font-family: $font-family;
            color: $text_color;
            font-weight: $font-weight;
-           line-height: 15px;
+           line-height: 13px;
        }
        input {
                width: 272px;
@@ -150,6 +151,7 @@ main{
            color: $white_color;
            margin: $margin;
            font-size: 12px;
+           cursor: $cursor;
            &:hover{
            background-color: #E6FF94;
            color: $main_color;
@@ -159,12 +161,12 @@ main{
            width:80px;
            height:80px;
            border-radius: $border-radius;
-           background-color:$light_color;
-           border:6px solid $main_color;
+           background-color:$main_color;
+           border:6px solid $light_color;
            margin-left: 62px;
-           margin-top:52px;
+           margin-top:72px;
            h3{
-               color: $text_color;
+               color: $light_color;
                line-height: $line-height;
                font-size: $font-size;
                font-family: $font-family;
@@ -176,9 +178,9 @@ main{
        }
    }
    .greenCheck{
-    height: 66vh;
+    height: 65vh;
      h2{
-        font-size: 2rem;
+        font-size: 24px;
         font-family: $font-family;
         @include display-text-center;
         color: $accent_color;
@@ -227,6 +229,7 @@ button{
     color: $text_color;
     margin: $margin;
     font-size: 12px;
+    cursor: $cursor;
     &:hover{
     background-color: #E6FF94;
     color: $main_color;
@@ -239,7 +242,7 @@ button{
     background-color: $light_color;
     border:6px solid $main_color;
     margin-left: 62px;
-    margin-top:4rem;
+    margin-top:80px;
     margin-bottom: -20px;
     h3{
         color: $text_color;
@@ -254,7 +257,7 @@ button{
 }
    }
    .resources{
-    height: 100vh;
+    height: 80vh;
     background-color: $light_color;
     h2{
         color: $text_color;
@@ -278,7 +281,7 @@ button{
             margin-left: 3rem;
             padding: 0;
             li {
-                margin-bottom: 2rem;
+                margin-bottom: 1rem;
                 margin-left: 2rem;
                 a {
                     color: $text_color;
@@ -292,45 +295,64 @@ button{
         }
         
     }
-}
-}
-main{
-    .content {
-        height: 100vh;
-        margin-bottom: -13rem;
-        margin-top: 1rem;
-      h1 {
-        $font-family: "Ubuntu Mono", monospace;
-        margin-left: 3rem;
-        margin-top: 3rem;
-        line-height: 2rem;
-        font-size: 2rem;
-        color: $accent_color;
+    .top-circle{
+      width:80px;
+      height:80px;
+      border-radius: $border-radius;
+      background-color:$main_color;
+      border:6px solid $light_color;
+      margin-left: 62px;
+      margin-top:52px;
+      h3{
+          color: $light_color;
+          line-height: $line-height;
+          font-size: $font-size;
+          font-family: $font-family;
+          margin-top: 25px;
+          margin-left: 4px;
+          @include display-text-center;
       }
-      p {
-        color: $white_color;
-        font-size: 14px;
-        line-height: 1rem;
-        margin-left: 3rem;
-        margin-top: 3rem;    
-      }
-    }
+      animation: pulse 10s infinite;
   }
+}
+.content {
+  height: 100vh;
+  margin-bottom: -13rem;
+  margin-top: 2rem;
+h1 {
+  $font-family: "Ubuntu Mono", monospace;
+  margin-left: 3rem;
+  margin-top: 4rem;
+  line-height: 2rem;
+  font-size: 2rem;
+  color: $accent_color;
+  font-weight: 300;
+}
+p {
+  color: $white_color;
+  font-size: 14px;
+  line-height: 1rem;
+  margin-left: 3rem;
+  margin-top: 3rem; 
+  margin-right: 3rem;   
+}
+}
+} 
 .footer {
   padding: 20px;
+  margin-top: 5rem;
   color: $white_color;
   background-color: $main_color;
 .footer-container {
  display: flex;
-   align-items: center;
-   flex-wrap: wrap;
-   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
 .footer-section {
   text-align: left;
   flex: 1;
   margin: 10px;
-
   &.contact-info, &.made-possible {
     display: block;
   }
@@ -382,15 +404,16 @@ main{
         text-align: left;
         margin-left: 1rem;
         color: $accent_color;
-        margin: 0;
+        margin: auto;
+        line-height:14px;
         span {
-          font-size: 14px;
+          font-size: 16px;
           color: $white_color;
         }
       }
       .small-circle {
         position: absolute;
-        bottom: -15px;
+        bottom: -10px;
         right: -15px;
         width: 40px;
         height: 40px;
@@ -401,7 +424,26 @@ main{
     }
   }
 }
+
 /* Media Queries */
+@media (max-width: 767px) {
+  .footer-container {
+    .newsletter {
+      align-items: center;
+      flex-direction: column;
+      h4 {
+        display: none;
+      }
+      p, .newsletter-input, .newsletter-submit {
+        margin-bottom: 10px;
+      }
+    }
+      p {
+        display: block;
+        font-size: small;
+      }
+    }
+}
 @media (min-width: 1200px) {
     header {
         width: 1250px;
@@ -631,24 +673,7 @@ main{
     }
 }
 }
-@media (max-width: 767px) {
-    .footer-container {
-      .newsletter {
-        align-items: center;
-        flex-direction: column;
-        h4 {
-          display: none;
-        }
-        p, .newsletter-input, .newsletter-submit {
-          margin-bottom: 10px;
-        }
-      }
-        p {
-          display: block;
-          font-size: small;
-        }
-      }
- }
+
 @media (min-width: 1200px) {
     main{
         .content {
@@ -674,7 +699,7 @@ main{
           }
         }
       }
- }
+}
 @media (min-width: 1200px) {
         .footer-container {
           width: 95%;       
