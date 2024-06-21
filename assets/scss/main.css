@@ -506,7 +506,7 @@ main .content p {
     font-size: small;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1250px) {
   header {
     width: 1250px;
     padding: 0 20px;
@@ -571,7 +571,7 @@ main .content p {
   }
   main .calculate {
     width: 1260px;
-    height: 100vh;
+    height: 120vh;
   }
   main .calculate h2 {
     font-size: 48px;
@@ -615,7 +615,7 @@ main .content p {
     background-color: #40A578;
     border: 6px solid #A5DD9B;
     margin-left: 130px;
-    margin-top: -110px;
+    margin-top: 80px;
     animation: pulse 10s infinite;
   }
   main .calculate .top-circle h3 {
@@ -639,6 +639,11 @@ main .content p {
     font-weight: 500;
     margin: auto;
     margin-top: 10rem;
+    margin-left: 210px;
+    margin-right: 210px;
+  }
+  main .greenCheck h2 br {
+    display: block;
   }
   main .greenCheck p {
     font-family: "Ubuntu Mono", monospace;
@@ -646,10 +651,11 @@ main .content p {
     display: flex;
     justify-content: center;
     text-align: center;
-    color: #FFFFFF;
+    color: #E6FF94;
     font-weight: 400;
-    margin-left: 35px;
     margin-top: 50px;
+    margin-left: 160px;
+    margin-right: 160px;
   }
   main .greenCheck input {
     width: 680px;
@@ -689,7 +695,7 @@ main .content p {
     background-color: #A5DD9B;
     color: #006769;
     margin: auto;
-    font-size: 12px;
+    font-size: 16px;
   }
   main .greenCheck button:hover {
     background-color: #E6FF94;
@@ -717,20 +723,25 @@ main .content p {
     text-align: center;
   }
   main .resources {
+    height: 130vh;
     background-color: #A5DD9B;
   }
   main .resources h2 {
     color: #006769;
     font-size: 4rem;
-    margin-left: 3rem;
-    margin-top: 115px;
+    margin-left: 15rem;
+    margin-top: 150px;
   }
   main .resources p {
     color: #006769;
     font-size: 2rem;
     line-height: 2rem;
-    margin-left: 3rem;
+    margin-left: 15rem;
+    margin-right: 305px;
     margin-top: 3rem;
+  }
+  main .resources p br {
+    display: none;
   }
   main .resources .resourceList {
     margin-top: 2rem;
@@ -738,7 +749,7 @@ main .content p {
   main .resources .resourceList ul {
     color: #006769;
     margin-top: 3rem;
-    margin-left: 3rem;
+    margin-left: 15rem;
   }
   main .resources .resourceList ul li {
     margin-bottom: 2rem;
@@ -749,31 +760,53 @@ main .content p {
     text-decoration: none;
     font-size: 2rem;
   }
-}
-@media (min-width: 1200px) {
+  main .resources .top-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #A5DD9B;
+    border: 6px solid #40A578;
+    margin-left: 126px;
+    margin-top: 90px;
+    animation: pulse 10s infinite;
+  }
+  main .resources .top-circle h3 {
+    color: #006769;
+    line-height: 26px;
+    font-size: 26px;
+    font-family: "Ubuntu Mono", monospace;
+    margin-top: 82px;
+    margin-left: 4px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
   main .content {
+    height: 100vh;
     width: 50%;
     align-items: center;
     margin-left: 10rem;
     margin-top: 5rem;
   }
   main .content h1 {
-    font-size: 60px;
-    line-height: 80px;
-    margin-left: 1rem;
-    font-family: "Ubuntu Mono", monospace;
-    font-weight: 400;
+    margin-left: 3rem;
+    margin-top: 10rem;
+    line-height: 2rem;
+    font-size: 3rem;
+    color: #E6FF94;
+    font-weight: 300;
   }
   main .content p {
-    font-size: 19px;
-    line-height: 2rem;
-    margin-left: 1rem;
-    margin-top: 3rem;
     color: #FFFFFF;
-    font-family: "Ubuntu Mono", monospace;
+    font-size: 20px;
+    line-height: 20px;
+    margin-left: 3rem;
+    margin-top: 3rem;
+    margin-right: 3rem;
   }
-}
-@media (min-width: 1200px) {
+  main .content p:last-child {
+    display: none;
+  }
   .footer-container {
     width: 95%;
     margin-top: -9rem;
