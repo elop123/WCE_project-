@@ -354,19 +354,19 @@ main .resources .resourceList ul li a:hover {
   text-decoration: underline;
 }
 
-main .content {
+.content {
   height: 100vh;
   margin-bottom: -13rem;
   margin-top: 1rem;
 }
-main .content h1 {
+.content h1 {
   margin-left: 3rem;
   margin-top: 3rem;
   line-height: 2rem;
   font-size: 2rem;
   color: #E6FF94;
 }
-main .content p {
+.content p {
   color: #FFFFFF;
   font-size: 14px;
   line-height: 1rem;
