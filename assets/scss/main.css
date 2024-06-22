@@ -453,6 +453,10 @@ main .content p {
   font-family: "Ubuntu Mono", monospace;
   cursor: pointer;
 }
+.footer .newsletter-submit:hover {
+  background-color: #E6FF94;
+  color: #40A578;
+}
 .footer .footer-logo {
   display: flex;
   justify-content: right;
