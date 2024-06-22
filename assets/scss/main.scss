@@ -666,7 +666,7 @@ main{
     }
     }
     .resources{
-        height: 130vh;
+        height: 120vh;
         background-color: $light_color;
         h2{
             color: $text_color;
@@ -677,10 +677,10 @@ main{
         }
         p {
             color: $text_color;
-            font-size: 2rem;
+            font-size: 24px;
             line-height: 2rem;
             margin-left: 15rem;
-            margin-right: 305px;
+            margin-right: 26rem;
             margin-top: 3rem;
             br{
               display: none;
@@ -699,12 +699,12 @@ main{
                     a {
                         color: $text_color;
                         text-decoration: none;
-                        font-size: 2rem;
+                        font-size: 24px;
                         }
                     }
                 }
             }
-            .top-circle{
+        .top-circle{
               width:180px;
               height:180px;
               border-radius: $border-radius;
@@ -724,6 +724,17 @@ main{
               }
               animation: pulse 10s infinite;
           }
+        .bigCircle{
+          background-color: transparent;
+          position: absolute;
+          top: 2430px;
+          right: -350px;
+          width: 650px;
+          height: 650px;
+          border: 2px solid $text_color;
+          border-radius: 50%;
+          
+        }
             
     }
     .content {
@@ -757,85 +768,80 @@ main{
 }
 .footer-container {
   width: 95%;       
-  margin-top: -9rem;
-  align-items: center;
-  .footer-section {
-    margin: 10px 0;
-   h4, p, a {
-   margin-bottom: 10px;
-   color: $white_color;
- }
-    &.contact-info {
-      margin-left: 10rem;
-      font-size: 15px;
-      line-height: 10px;
-      color: $white_color;
-      font-family: $font-family;
-    }
-    &.made-possible {
-        text-align: left;
+  margin-top: 8rem;
+  margin-left: 5rem;
+   display: flex;
+   justify-content: grid;
+   grid-template-columns: 3, 1fr;
+   gap: 3rem;
+  
+   .footer-section {
+    &.contact-info{
+      margin-top: 1.2rem;
+      margin-right: 3rem;
+      h4, p{
+        font-size: 16px;
+        line-height: 8px; 
+      }}
+      &.made-possible{
+        h4,p,a{
+          font-size: 16px;
+          line-height: 16px;
+        }
+        a{
+        color: $white_color;
+        }
+      }
+   
+    &.newsletter{
+      h4{
+        display: block;
+        margin-top: 2.3rem;
+        line-height: 4px;
+      }
+      p{
+        font-size: 16px;
+        line-height: 3px;
+        margin-right: 4rem;
+        margin-top: 2.3rem;
+        &:nth-child(3){
+          display: none;
+        }
+      }
       
-        p {
-            margin: 4px 0; 
-            font-size: small;
-            white-space: pre-line;
+    }
+    }
+    .footer-logo {
+      .huge_circle {
+        width: 200px; 
+        height: 200px; 
+        margin-top: -4rem;
+        margin-left: 2.2rem;
+        h2 {
+          font-size: 60px;
+          text-align: center;
+          line-height: 30px;
+          span{
+              width: 25px;
+              font-size: 20px;
+              margin: auto;
+              //margin-right: 5rem;  
+              font-weight: 200;                  
+          }
+        }
+        .small-circle {
+          margin-bottom: 0.3rem;
+          width: 80px; 
+          height: 80px; 
         }
       }
-    a {
-      color: $white_color;
-     
+   
     }
+   
+   }
+  
   } 
-  .footer-logo {
-    .huge_circle {
-      width: 160px; 
-      height: 160px; 
-      h2 {
-        font-size: 45px;
-        margin-right: -1rem;
-        line-height: 30.07px;
-        span{
-            width: 25px;
-            font-size: 34px;
-            margin-right: 2rem;                    
-        }
-      }
-      .small-circle {
-        width: 55px; 
-        height: 55px; 
-      }
-    }
  
-  }
-}
-}
-
-// @media (min-width: 1200px) {
-//     main{
-//         .content {
-//             width: 50%;
-//             align-items: center;
-//             margin-left: 10rem;
-//             margin-top: 5rem;
-//           h1 {
-//            font-size: 60px;
-//            line-height: 80px;
-//            margin-left: 1rem;
-//            font-family: $font-family;
-//            font-weight: $font-weight; 
-//           }
-
-//           p {
-//               font-size: 19px; 
-//               line-height: 2rem;
-//               margin-left: 1rem;
-//               margin-top: 3rem;
-//               color: $white_color;
-//             font-family: $font-family;
-//           }
-//         }
-//       }
-// }
 
     
       
