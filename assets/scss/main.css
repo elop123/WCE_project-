@@ -422,7 +422,7 @@ main .top-circle h3 {
 .footer .footer-container .newsletter h4 {
   display: none;
 }
-.footer .footer-container .newsletter .newsletter-submit {
+.footer .footer-container .newsletter p, .footer .footer-container .newsletter .newsletter-input, .footer .footer-container .newsletter .newsletter-submit {
   margin-bottom: 10px;
 }
 .footer .footer-container p {

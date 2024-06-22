@@ -325,7 +325,7 @@ button{
       margin-top: 5rem;
       color: $white_color;
       background-color: $main_color;
-    .footer-container { 
+  .footer-container { 
       
     .newsletter {
           align-items: center;
@@ -334,7 +334,7 @@ button{
         h4 {
             display: none;
           }
-          p, .newsletter-input{} .newsletter-submit {
+          p,.newsletter-input, .newsletter-submit {
             margin-bottom: 10px;
           }
         }
