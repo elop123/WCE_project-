@@ -32,9 +32,12 @@ nav{
         text-decoration: none;
          margin-top: 30px;
          margin-left: 15px;
+         &:visited{
+          color:$text_color;
+         }
          &:hover{
             color: $white_color;
-         }
+         }   
     }
 }
 main{
