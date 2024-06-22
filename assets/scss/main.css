@@ -29,14 +29,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Ubuntu Mono", monospace;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
 }
 
 header {
   background-color: #A5DD9B;
-  width: 100vw;
+  width: 483px;
   height: 80px;
   margin: auto;
   margin-top: -14px;
@@ -56,9 +53,6 @@ nav a {
   margin-top: 30px;
   margin-left: 15px;
 }
-nav a:visited {
-  color: #006769;
-}
 nav a:hover {
   color: #FFFFFF;
 }
@@ -68,7 +62,6 @@ main .container {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100vw;
 }
 main .container .big-circle {
   width: 340px;
@@ -129,7 +122,7 @@ main .container .top-circle h3 {
   margin-left: 8px;
 }
 main .calculate {
-  width: 100vw;
+  width: 480px;
   height: 80vh;
   background-color: #A5DD9B;
 }
@@ -157,11 +150,11 @@ main .calculate p.text {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-size: 13px;
+  font-size: 11px;
   font-family: "Ubuntu Mono", monospace;
   color: #006769;
   font-weight: 400;
-  line-height: 13px;
+  line-height: 15px;
 }
 main .calculate input {
   width: 272px;
@@ -202,7 +195,6 @@ main .calculate button {
   color: #FFFFFF;
   margin: auto;
   font-size: 12px;
-  cursor: pointer;
 }
 main .calculate button:hover {
   background-color: #E6FF94;
@@ -212,14 +204,14 @@ main .calculate .top-circle {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: #40A578;
-  border: 6px solid #A5DD9B;
+  background-color: #A5DD9B;
+  border: 6px solid #40A578;
   margin-left: 62px;
-  margin-top: 72px;
+  margin-top: 52px;
   animation: pulse 10s infinite;
 }
 main .calculate .top-circle h3 {
-  color: #A5DD9B;
+  color: #006769;
   line-height: 14px;
   font-size: 14px;
   font-family: "Ubuntu Mono", monospace;
@@ -230,10 +222,10 @@ main .calculate .top-circle h3 {
   text-align: center;
 }
 main .greenCheck {
-  height: 65vh;
+  height: 66vh;
 }
 main .greenCheck h2 {
-  font-size: 24px;
+  font-size: 2rem;
   font-family: "Ubuntu Mono", monospace;
   display: flex;
   justify-content: center;
@@ -296,7 +288,6 @@ main .greenCheck button {
   color: #006769;
   margin: auto;
   font-size: 12px;
-  cursor: pointer;
 }
 main .greenCheck button:hover {
   background-color: #E6FF94;
@@ -309,7 +300,7 @@ main .greenCheck .top-circle {
   background-color: #A5DD9B;
   border: 6px solid #40A578;
   margin-left: 62px;
-  margin-top: 80px;
+  margin-top: 4rem;
   margin-bottom: -20px;
   animation: pulse 10s infinite;
 }
@@ -325,8 +316,7 @@ main .greenCheck .top-circle h3 {
   text-align: center;
 }
 main .resources {
-  height: 80vh;
-  width: 100vw;
+  height: 100vh;
   background-color: #A5DD9B;
 }
 main .resources h2 {
@@ -352,7 +342,7 @@ main .resources .resourceList ul {
   padding: 0;
 }
 main .resources .resourceList ul li {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   margin-left: 2rem;
 }
 main .resources .resourceList ul li a {
@@ -365,40 +355,16 @@ main .resources .resourceList ul li a:hover {
 }
 
 .content {
-.main .resources .top-circle {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: #40A578;
-  border: 6px solid #A5DD9B;
-  margin-left: 62px;
-  margin-top: 52px;
-  animation: pulse 10s infinite;
-}
-main .resources .top-circle h3 {
-  color: #A5DD9B;
-  line-height: 14px;
-  font-size: 14px;
-  font-family: "Ubuntu Mono", monospace;
-  margin-top: 25px;
-  margin-left: 4px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-main .content {
-
   height: 100vh;
   margin-bottom: -13rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 .content h1 {
   margin-left: 3rem;
-  margin-top: 4rem;
+  margin-top: 3rem;
   line-height: 2rem;
   font-size: 2rem;
   color: #E6FF94;
-  font-weight: 300;
 }
 .content p {
   color: #FFFFFF;
@@ -406,37 +372,29 @@ main .content {
   line-height: 1rem;
   margin-left: 3rem;
   margin-top: 3rem;
-  margin-right: 3rem;
 }
 
 .footer {
   padding: 20px;
-  margin-top: 5rem;
   color: #FFFFFF;
   background-color: #40A578;
 }
-.footer .footer-container .newsletter {
+.footer .footer-container {
+  display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.footer .footer-container .newsletter h4 {
-  display: none;
+.footer .footer-container .footer-section {
+  text-align: left;
+  flex: 1;
+  margin: 10px;
 }
-.footer .footer-container .newsletter p, .footer .footer-container .newsletter .newsletter-input, .footer .footer-container .newsletter .newsletter-submit {
-  margin-bottom: 10px;
-}
-.footer .footer-container p {
-  display: block;
-  font-size: small;
-}
-.footer .footer-section {
-  margin-left: 2rem;
-}
-.footer .footer-section.contact-info, .footer .footer-section.made-possible {
+.footer .footer-container .footer-section.contact-info, .footer .footer-container .footer-section.made-possible {
   display: block;
 }
 @media (max-width: 767px) {
-  .footer .footer-section.contact-info, .footer .footer-section.made-possible {
+  .footer .footer-container .footer-section.contact-info, .footer .footer-container .footer-section.made-possible {
     display: none;
   }
 }
@@ -459,16 +417,10 @@ main .content {
   font-family: "Ubuntu Mono", monospace;
   cursor: pointer;
 }
-.footer .newsletter-submit:hover {
-  background-color: #E6FF94;
-  color: #40A578;
-}
 .footer .footer-logo {
   display: flex;
-  justify-content: right;
-  margin-left: 220px;
-  margin-top: -120px;
-  margin-right: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 .footer .footer-logo .huge_circle {
   position: relative;
@@ -486,16 +438,15 @@ main .content {
   text-align: left;
   margin-left: 1rem;
   color: #E6FF94;
-  margin: auto;
-  line-height: 14px;
+  margin: 0;
 }
 .footer .footer-logo .huge_circle h2 span {
-  font-size: 16px;
+  font-size: 14px;
   color: #FFFFFF;
 }
 .footer .footer-logo .huge_circle .small-circle {
   position: absolute;
-  bottom: -10px;
+  bottom: -15px;
   right: -15px;
   width: 40px;
   height: 40px;
@@ -505,25 +456,9 @@ main .content {
 }
 
 /* Media Queries */
-@media (max-width: 767px) {
-  .footer-container .newsletter {
-    align-items: center;
-    flex-direction: column;
-  }
-  .footer-container .newsletter h4 {
-    display: none;
-  }
-  .footer-container .newsletter p, .footer-container .newsletter .newsletter-input, .footer-container .newsletter .newsletter-submit {
-    margin-bottom: 10px;
-  }
-  .footer-container p {
-    display: block;
-    font-size: small;
-  }
-}
 @media (min-width: 1200px) {
   header {
-    width: 100vw;
+    width: 1250px;
     padding: 0 20px;
     margin: -16px;
   }
@@ -585,8 +520,8 @@ main .content {
     margin-top: 85px;
   }
   main .calculate {
-    width: 100vw;
-    height: 120vh;
+    width: 1260px;
+    height: 100vh;
   }
   main .calculate h2 {
     font-size: 48px;
@@ -630,7 +565,7 @@ main .content {
     background-color: #40A578;
     border: 6px solid #A5DD9B;
     margin-left: 130px;
-    margin-top: 80px;
+    margin-top: -110px;
     animation: pulse 10s infinite;
   }
   main .calculate .top-circle h3 {
@@ -654,11 +589,6 @@ main .content {
     font-weight: 500;
     margin: auto;
     margin-top: 10rem;
-    margin-left: 210px;
-    margin-right: 210px;
-  }
-  main .greenCheck h2 br {
-    display: block;
   }
   main .greenCheck p {
     font-family: "Ubuntu Mono", monospace;
@@ -666,11 +596,10 @@ main .content {
     display: flex;
     justify-content: center;
     text-align: center;
-    color: #E6FF94;
+    color: #FFFFFF;
     font-weight: 400;
+    margin-left: 35px;
     margin-top: 50px;
-    margin-left: 160px;
-    margin-right: 160px;
   }
   main .greenCheck input {
     width: 680px;
@@ -710,7 +639,7 @@ main .content {
     background-color: #A5DD9B;
     color: #006769;
     margin: auto;
-    font-size: 16px;
+    font-size: 12px;
   }
   main .greenCheck button:hover {
     background-color: #E6FF94;
@@ -738,25 +667,20 @@ main .content {
     text-align: center;
   }
   main .resources {
-    height: 120vh;
     background-color: #A5DD9B;
   }
   main .resources h2 {
     color: #006769;
     font-size: 4rem;
-    margin-left: 15rem;
-    margin-top: 150px;
+    margin-left: 3rem;
+    margin-top: 115px;
   }
   main .resources p {
     color: #006769;
-    font-size: 24px;
+    font-size: 2rem;
     line-height: 2rem;
-    margin-left: 15rem;
-    margin-right: 26rem;
+    margin-left: 3rem;
     margin-top: 3rem;
-  }
-  main .resources p br {
-    display: none;
   }
   main .resources .resourceList {
     margin-top: 2rem;
@@ -764,7 +688,7 @@ main .content {
   main .resources .resourceList ul {
     color: #006769;
     margin-top: 3rem;
-    margin-left: 15rem;
+    margin-left: 3rem;
   }
   main .resources .resourceList ul li {
     margin-bottom: 2rem;
@@ -773,123 +697,95 @@ main .content {
   main .resources .resourceList ul li a {
     color: #006769;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 2rem;
   }
-  main .resources .top-circle {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    background-color: #A5DD9B;
-    border: 6px solid #40A578;
-    margin-left: 126px;
-    margin-top: 90px;
-    animation: pulse 10s infinite;
+}
+@media (max-width: 767px) {
+  .footer-container .newsletter {
+    align-items: center;
+    flex-direction: column;
   }
-  main .resources .top-circle h3 {
-    color: #006769;
-    line-height: 26px;
-    font-size: 26px;
-    font-family: "Ubuntu Mono", monospace;
-    margin-top: 82px;
-    margin-left: 4px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+  .footer-container .newsletter h4 {
+    display: none;
   }
-  main .resources .bigCircle {
-    background-color: transparent;
-    position: absolute;
-    top: 2430px;
-    right: -350px;
-    width: 650px;
-    height: 650px;
-    border: 2px solid #006769;
-    border-radius: 50%;
+  .footer-container .newsletter p, .footer-container .newsletter .newsletter-input, .footer-container .newsletter .newsletter-submit {
+    margin-bottom: 10px;
   }
+  .footer-container p {
+    display: block;
+    font-size: small;
+  }
+}
+@media (min-width: 1200px) {
   main .content {
-    height: 100vh;
     width: 50%;
     align-items: center;
     margin-left: 10rem;
     margin-top: 5rem;
   }
   main .content h1 {
-    margin-left: 3rem;
-    margin-top: 10rem;
-    line-height: 2rem;
-    font-size: 3rem;
-    color: #E6FF94;
-    font-weight: 300;
+    font-size: 60px;
+    line-height: 80px;
+    margin-left: 1rem;
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 400;
   }
   main .content p {
-    color: #FFFFFF;
-    font-size: 20px;
-    line-height: 20px;
-    margin-left: 3rem;
+    font-size: 19px;
+    line-height: 2rem;
+    margin-left: 1rem;
     margin-top: 3rem;
-    margin-right: 3rem;
+    color: #FFFFFF;
+    font-family: "Ubuntu Mono", monospace;
   }
-  main .content p:last-child {
-    display: none;
-  }
+}
+@media (min-width: 1200px) {
   .footer-container {
     width: 95%;
-    margin-top: 8rem;
-    margin-left: 5rem;
-    display: flex;
-    justify-content: grid;
-    grid-template-columns: 3, 1fr;
-    gap: 3rem;
+    margin-top: -9rem;
+    align-items: center;
   }
-  .footer-container .footer-section.contact-info {
-    margin-top: 1.2rem;
-    margin-right: 3rem;
+  .footer-container .footer-section {
+    margin: 10px 0;
   }
-  .footer-container .footer-section.contact-info h4, .footer-container .footer-section.contact-info p {
-    font-size: 16px;
-    line-height: 8px;
-  }
-  .footer-container .footer-section.made-possible h4, .footer-container .footer-section.made-possible p, .footer-container .footer-section.made-possible a {
-    font-size: 16px;
-    line-height: 16px;
-  }
-  .footer-container .footer-section.made-possible a {
+  .footer-container .footer-section h4, .footer-container .footer-section p, .footer-container .footer-section a {
+    margin-bottom: 10px;
     color: #FFFFFF;
   }
-  .footer-container .footer-section.newsletter h4 {
-    display: block;
-    margin-top: 2.5rem;
-    line-height: 4px;
+  .footer-container .footer-section.contact-info {
+    margin-left: 10rem;
+    font-size: 15px;
+    line-height: 10px;
+    color: #FFFFFF;
+    font-family: "Ubuntu Mono", monospace;
   }
-  .footer-container .footer-section.newsletter p {
-    font-size: 16px;
-    line-height: 3px;
-    margin-right: 4rem;
-    margin-top: 2.3rem;
+  .footer-container .footer-section.made-possible {
+    text-align: left;
   }
-  .footer-container .footer-section.newsletter p:nth-child(3) {
-    display: none;
+  .footer-container .footer-section.made-possible p {
+    margin: 4px 0;
+    font-size: small;
+    white-space: pre-line;
+  }
+  .footer-container .footer-section a {
+    color: #FFFFFF;
   }
   .footer-container .footer-logo .huge_circle {
-    width: 200px;
-    height: 200px;
-    margin-top: -4rem;
-    margin-left: 2.2rem;
+    width: 160px;
+    height: 160px;
   }
   .footer-container .footer-logo .huge_circle h2 {
-    font-size: 60px;
-    text-align: center;
-    line-height: 30px;
+    font-size: 45px;
+    margin-right: -1rem;
+    line-height: 30.07px;
   }
   .footer-container .footer-logo .huge_circle h2 span {
     width: 25px;
-    font-size: 20px;
-    margin: auto;
-    font-weight: 200;
+    font-size: 34px;
+    margin-right: 2rem;
   }
   .footer-container .footer-logo .huge_circle .small-circle {
-    margin-bottom: 0.3rem;
-    width: 80px;
-    height: 80px;
+    width: 55px;
+    height: 55px;
   }
 }
