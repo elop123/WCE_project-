@@ -4,6 +4,7 @@
 
 
 
+
 body{
     background-color: $main_color;
     margin: 0;
@@ -21,29 +22,29 @@ header{
     margin-top: -14px;
 }
 nav{
-    font-size: $font-size;
-    font-weight: $font-weight;
-    font-family: $font-family;
-    ul li{
-        display: inline-flex;
-        justify-content: row;
-    } a{
-        text-decoration: none;
-         margin-top: 30px;
-         margin-left: 15px;
-         &:visited{
-          color:$text_color;
-         }
-         &:hover{
-            color: $white_color;
-         }
-    }
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-family: $font-family;
+  ul li{
+      display: inline-flex;
+      justify-content: row;
+  } a{
+      text-decoration: none;
+       margin-top: 30px;
+       margin-left: 15px;
+       &:visited{
+        color:$text_color;
+       }
+       &:hover{
+          color: $white_color;
+       }
+  }
 }
 main{
     .container {
         @include display-main;
-        height: 100vh;
-        width: 100vw;
+        height: $height;
+        width: $width;
     .big-circle{
         width:340px;
         height: 340px;
@@ -101,7 +102,7 @@ main{
         animation: pulse 10s infinite;
     }}
     .calculate {
-        width:100vw;
+        width:$width;
         height: 80vh;
         background-color:$light_color;
        h2{
@@ -128,51 +129,27 @@ main{
            line-height: 13px;
        }
        input {
-               width: 272px;
-               height: 25px;
-               border-radius: 77px;
-               border: none;
-               @include display-text-center;
-               align-items: center;
-               background-color: $main_color;
-               color: $white_color;
-               margin: $margin;
-               margin-top: 30px;
-               margin-bottom: 30px;
-               &::placeholder {
-                   font-size: 1rem;
-                   font-family: $font-family;
-                   color: $white_color;
-                   text-align: center;
-               }
+              @include input;
+              background-color:$main_color;
+            }
            }
        button{
-           width: 108px;
-           height: 25px;
-           border-radius: 77px;
-           border: none;
-           @include display-main;
-           background-color: $main_color;
-           color: $white_color;
-           margin: $margin;
-           font-size: 12px;
-           &:hover{
-           background-color: #E6FF94;
-           color: $main_color;
-           }
+        @include button;
+        background-color: $main_color;
        }
        .top-circle{
            width:80px;
            height:80px;
            border-radius: $border-radius;
-           background-color:$light_color;
-           border:6px solid $main_color;
+           background-color:$main_color;
+           border:6px solid $light_color;
            margin-left: 62px;
            margin-top:72px;
            h3{
-               color: $text_color;
+               color: $light_color;
                line-height: $line-height;
                font-size: $font-size;
+               font-weight: 200;
                font-family: $font-family;
                margin-top: 25px;
                margin-left: 4px;
@@ -319,13 +296,13 @@ button{
       animation: pulse 10s infinite;
   }
 }
-}
+
     .content {
         height: 100vh;
         margin-bottom: -13rem;
         margin-top: 2rem;
       h1 {
-        $font-family: "Ubuntu Mono", monospace;
+        font-family: $font-family;
         margin-left: 3rem;
         margin-top: 4rem;
         line-height: 2rem;
@@ -343,69 +320,73 @@ button{
       }
     }
   
-.footer {
-  padding: 20px;
-  margin-top: 5rem;
-  color: $white_color;
-  background-color: $main_color;
-.footer-container {
-
-.newsletter {
-      align-items: center;
-      flex-direction: column;
-    h4 {
-        display: none;
-      }
-      p, .newsletter-input, .newsletter-submit {
-        margin-bottom: 10px;
-      }
-      p {
+    .footer {
+      padding: 20px;
+      margin-top: 5rem;
+      color: $white_color;
+      background-color: $main_color;
+    .footer-container { 
+      
+    .newsletter {
+          align-items: center;
+          flex-direction: column;
+          
+        h4 {
+            display: none;
+          }
+          p, .newsletter-input{} .newsletter-submit {
+            margin-bottom: 10px;
+          }
+        }
+          p {
+            display: block;
+            font-size: small;
+          }
+        }
+    .footer-section {
+      text-align: left;
+      //margin-left: 2rem;
+      &.contact-info, &.made-possible {
         display: block;
-        font-size: small;
+      }
+  
+      @media (max-width: 767px) {
+        &.contact-info, &.made-possible{
+          display: none;
+        }
+        
       }
     }
-  }
-}
-.footer-section {
-  margin-left: 2rem;
-  //background-color: red;
-  &.contact-info, &.made-possible {
-    display: block;
-  }
-  @media (max-width: 767px) {
-    &.contact-info, &.made-possible{
-      display: none;
-    }
-}
-  .newsletter-input {
-    padding: 5px  15px;
-    border-radius: 55px;
-    margin-bottom: 10px;
-    color: $main_color;
-    font-family: $font-family;
-    border: 1px solid $light_color;
-    background-color: $accent_color;
-  }
-  .newsletter-submit {
-    width: 100px;
-    padding: 4px 20px;
-    border: 1px solid $light_color;
-    border-radius: 50px;
-    background-color: $main_color;
-    color: $accent_color;
-    font-family: $font-family;
-    cursor: pointer;
-    &:hover{
-      background-color: $accent_color;
+    .newsletter-input {
+      padding: 5px  15px;
+      border-radius: 55px;
+      margin-bottom: 10px;
       color: $main_color;
+      font-family: $font-family;
+      border: 1px solid $light_color;
+      background-color: $accent_color;
     }
-  }
-  .footer-logo {
-    display: flex;
-    justify-content: right;
-    margin-left: 220px;
-    margin-top:-120px;
-    margin-right: 2rem;
+    .newsletter-submit {
+      width: 100px;
+      padding: 4px 20px;
+      border: 1px solid $light_color;
+      border-radius: 50px;
+      //margin-left: 2rem;
+      color: $accent_color;
+      font-family: $font-family;
+
+      cursor: pointer;
+      &:hover{
+        background-color: $accent_color;
+        color: $main_color;
+      }
+    }
+    .footer-logo {
+      display: flex;
+      justify-content: right;
+      margin-left: 220px;
+      margin-top:-120px;
+      margin-right: 2rem;
       .huge_circle {
         position: relative;
         width: 110px;
@@ -423,7 +404,7 @@ button{
           margin-left: 1rem;
           color: $accent_color;
           margin: auto;
-        line-height:14px;
+          line-height:14px;
           span {
             font-size: 16px;
             color: $white_color;
@@ -441,238 +422,13 @@ button{
         }
       }
     }
-}
+    }
+      
+    
+
 
 /* Media Queries */
-// @media (min-width: 1200px) {
-//     header {
-//         width: 1250px;
-//         padding: 0 20px;
-//         margin: -16px;
-//      nav{
-//         font-size: 16px;
-//      } ul {
-//         display: flex;
-//         flex-wrap: wrap;
-//         justify-content: center;
-//     }
-// }
 
-// main{
-//     .container{
-//         height: 100vh;
-//         margin-bottom: 10rem;
-//         .big-circle {
-//             width:540px;
-//             height: 540px;
-//             border-radius: $border-radius;
-//             margin: $margin;
-//             margin-top: 70px;
-//             h1{
-//                 line-height: 85px;
-//                 font-size: 85px;
-//                 font-family: $font-family;
-//                 font-weight: $font-weight;
-//                 margin: auto -128px;
-//                 margin-top: 26px;
-//             }
-//             .small-circle {
-//                 width:246px;
-//                 height:246px;
-//                 border-radius: 50%;
-//                 display: flex;
-//                 justify-content: center;
-//                 margin-left: 350px;
-//                 margin-top: -80px;
-//             h2{
-//                 line-height:24px;
-//                 font-size: 24px;
-//                 font-weight: 300;
-//             }
-//         }
-//         }
-//         .top-circle{
-//             width:180px;
-//             height:180px;
-//             margin-left: -230px;
-//             margin-top:34px;
-//             background-color:$light_color;
-//             h3{
-//                 line-height: 24px;
-//                 font-size: 24px;
-//                @include display-main;
-//                 text-align: center;
-//                 margin-top: 85px;
-//             }
-//         }
-//     }
-//      .calculate {
-//         width:1260px;
-//         height: 100vh;
-   
-//          h2{
-//             font-size: 48px;
-//              padding-top: 110px;
-//     }
-//     p{ font-size: 38px;
-//             font-family: $font-family;
-//              margin-left: 35px;
-//          }
-//        p.text{
-//             font-size: 20px;
-//             line-height: 20px;
-//            @include display-text-center;
-//            margin-bottom: 30px;
-//         }
-//          input {
-//              width: 680px;
-//             height: 40px;
-//              @include display-text-center;
-//              align-items: center;
-//              margin-top: 50px;
-//              margin-bottom: 30px;
-//          }
-//          button{
-//          width: 234px;
-//          height: 40px;
-//          border-radius: 77px;
-//          margin: $margin;
-//          font-size: 16px;
-//          margin-bottom: 30px;
-//      }
-//      .top-circle{
-//          width:180px;
-//          height:180px;
-//          border-radius: $border-radius;
-//          background-color: $main_color;
-//          border:6px solid $light_color;
-//          margin-left: 130px;
-//         margin-top:-110px;
-//          h3{
-//             color:$light_color;
-//              line-height: 26px;
-//              font-size: 26px;
-//              font-family: $font-family;
-//               margin-top: 72px;
-//               margin-left: 2px;
-//          }
-//          animation: pulse 10s infinite;
-//      }
-//      }
-//     .greenCheck{
-//         height: 100vh;
-//          h2{
-//             font-size: 3rem;
-//             font-family: $font-family;
-//             @include display-text-center;
-//             color: $accent_color;
-//             font-weight: 500;
-//             margin: auto;
-//             margin-top: 10rem;
-           
-//          }
-//          p{font-family: $font-family;
-//             font-size: 2rem;
-//             @include display-text-center;
-//             color: $white_color;
-//             font-weight: 400;
-//             margin-left: 35px;
-//             margin-top: 50px;
-    
-//          }
-//          input {
-//             width: 680px;
-//             height: 40px;
-//             border-radius: 77px;
-//             border: none;
-//             @include display-text-center;
-//             align-items: center;
-//             background-color: $light_color;
-//             color: $text_color;
-//             margin: $margin;
-//             margin-top: 30px;
-//             margin-bottom: 30px;
-//             &::placeholder {
-//                 font-size: 1rem;
-//                 font-family: $font-family;
-//                 color: $text_color;
-//                 text-align: center;
-//             }
-//         }
-//     button{
-//         width: 234px;
-//          height: 40px;
-//         border-radius: 77px;
-//         border: none;
-//         @include display-main;
-//         background-color: $light_color;
-//         color: $text_color;
-//         margin: $margin;
-//         font-size: 12px;
-//         &:hover{
-//         background-color: #E6FF94;
-//         color: $main_color;
-//         }
-//     }
-//     .top-circle{
-//         width:180px;
-//         height:180px;
-//         border-radius: $border-radius;
-//         background-color: $light_color;
-//         border:6px solid $main_color;
-//         margin-left: 126px;
-//         margin-top:220px;
-        
-//         h3{
-//             color: $text_color;
-//             line-height: 26px;
-//             font-size: 26px;
-//             font-family: $font-family;
-//             margin-top: 82px;
-//             margin-left: 4px;
-//             @include display-text-center;
-//         }
-//         animation: pulse 10s infinite;
-//     }
-//     }
-//     .resources{
-//         //height: 100vh;
-//         background-color: $light_color;
-//         h2{
-//             color: $text_color;
-//             font-size: 4rem;
-//             margin-left: 3rem;
-//             margin-top:115px;
-//         }
-//         p {
-//             color: $text_color;
-//             font-size: 2rem;
-//             line-height: 2rem;
-//             margin-left: 3rem;
-//             margin-top: 3rem;
-            
-//         }
-//         .resourceList {
-//             margin-top: 2rem;
-//             ul {
-//                 color: $text_color;
-//                 margin-top: 3rem;
-//                 margin-left: 3rem;
-//                 li {
-//                     margin-bottom: 2rem;
-//                     margin-left: 2rem;
-//                     a {
-//                         color: $text_color;
-//                         text-decoration: none;
-//                         font-size: 2rem;
-//                         }
-//                     }
-//                 }
-//             }
-            
-//     }
-// }
-// }
 @media (max-width: 767px) {
   .footer-container {
     .newsletter {
@@ -683,95 +439,18 @@ button{
       }
       p, .newsletter-input, .newsletter-submit {
         margin-bottom: 10px;
+        margin-left: 2rem;
+        //background-color: red;
       }
     }
       p {
         display: block;
         font-size: small;
       }
+      
     }
 }
-// @media (min-width: 1200px) {
-//     main{
-//         .content {
-//             width: 50%;
-//             align-items: center;
-//             margin-left: 10rem;
-//             margin-top: 5rem;
-//           h1 {
-//            font-size: 60px;
-//            line-height: 80px;
-//            margin-left: 1rem;
-//            font-family: $font-family;
-//            font-weight: $font-weight; 
-//           }
 
-//           p {
-//               font-size: 19px; 
-//               line-height: 2rem;
-//               margin-left: 1rem;
-//               margin-top: 3rem;
-//               color: $white_color;
-//             font-family: $font-family;
-//           }
-//         }
-//       }
-//  }
-// @media (min-width: 1200px) {
-//         .footer-container {
-//           width: 95%;       
-//           margin-top: -9rem;
-//           align-items: center;
-//           .footer-section {
-//             margin: 10px 0;
-//            h4, p, a {
-//            margin-bottom: 10px;
-//            color: $white_color;
-//          }
-//             &.contact-info {
-//               margin-left: 10rem;
-//               font-size: 15px;
-//               line-height: 10px;
-//               color: $white_color;
-//               font-family: $font-family;
-//             }
-//             &.made-possible {
-//                 text-align: left;
-              
-//                 p {
-//                     margin: 4px 0; 
-//                     font-size: small;
-//                     white-space: pre-line;
-//                 }
-//               }
-//             a {
-//               color: $white_color;
-             
-//             }
-//           } 
-//           .footer-logo {
-//             .huge_circle {
-//               width: 160px; 
-//               height: 160px; 
-//               h2 {
-//                 font-size: 45px;
-//                 margin-right: -1rem;
-//                 line-height: 30.07px;
-//                 span{
-//                     width: 25px;
-//                     font-size: 34px;
-//                     margin-right: 2rem;                    
-//                 }
-//               }
-//               .small-circle {
-//                 width: 55px; 
-//                 height: 55px; 
-//               }
-//             }
-         
-//           }
-//         }
-//       }
 
 @media (min-width: 1200px) {
   
@@ -1013,8 +692,7 @@ main{
             width:180px;
             height:180px;
             border-radius: $border-radius;
-            background-color: $light_color;
-            border:6px solid $main_color;
+            border:6px solid $light_color;
             margin-left: 126px;
             margin-top:90px;
             
@@ -1049,7 +727,7 @@ main{
           margin-left: 10rem;
           margin-top: 5rem;
   h1 {
-    $font-family: "Ubuntu Mono", monospace;
+    font-family:$font-family;
     margin-left: 3rem;
     margin-top: 10rem;
     line-height: 2rem;
@@ -1064,25 +742,24 @@ main{
     margin-left: 3rem;
     margin-top: 3rem; 
     margin-right: 3rem; 
-    // &:last-child{
+    // &:nth-child(3){
     //   display: none;  
   }
   
   }
 }
 .footer-container {
-width: 95%;       
+width: 100%;       
 margin-top: 8rem;
-margin-left: 5rem;
+margin-left: 3rem;
  display: flex;
  justify-content: grid;
  grid-template-columns: 3, 1fr;
- gap: 2rem;
+ gap: 4rem;
 
  .footer-section {
   &.contact-info{
     margin-top: 1.2rem;
-    margin-right: 3rem;
     h4, p{
       font-size: 16px;
       line-height: 16px; 
@@ -1100,28 +777,33 @@ margin-left: 5rem;
   &.newsletter{
     h4{
       display: block;
-      margin-top: 2.6rem;
-      line-height: 4px;
+      margin-top: 2.3rem;
+      line-height: 16px;
+      margin-bottom: -1rem;
     }
     p{
       font-size: 16px;
-      line-height: 3px;
-      margin-right: 4rem;
+      line-height: 16px;
+      margin-right: 2rem;
       margin-top: 2.3rem;
       margin-bottom: 1.5rem;
       &:nth-child(3){
         display: none;
       }
     }
+    button{
+      margin-right: 6.6rem;
+    }
     
   }
   }
   .footer-logo {
     .huge_circle {
-      width: 200px; 
-      height: 200px; 
-      margin-top: -4rem;
-      margin-left: 2.2rem;
+      width: 160px; 
+      height: 160px; 
+      margin-top: 10rem;
+      margin-left: -8rem;
+      margin-bottom: 3rem;
       h2 {
         font-size: 60px;
         text-align: center;
@@ -1129,15 +811,14 @@ margin-left: 5rem;
         span{
             width: 25px;
             font-size: 20px;
-            margin: auto;
-            //margin-right: 5rem;  
+            margin: auto; 
             font-weight: 200;                  
         }
       }
       .small-circle {
         margin-bottom: 0.3rem;
-        width: 80px; 
-        height: 80px; 
+        width: 60px; 
+        height: 60px; 
       }
     }
  

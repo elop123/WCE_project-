@@ -16,3 +16,39 @@
     justify-content: center;
     text-align: center;
 }
+
+//Input:
+@mixin input{
+        width: 272px;
+        height: 25px;
+        border-radius: 77px;
+        border: none;
+        @include display-text-center;
+        align-items: center;
+        color: $white_color;
+        margin: $margin;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        &::placeholder {
+            font-size: 1rem;
+            font-family: $font-family;
+            color: $white_color;
+            text-align: center;
+        }
+}
+
+//Button:
+@mixin button{
+    width: 108px;
+    height: 25px;
+    border-radius: 77px;
+    border: none;
+    @include display-main;
+    color: $white_color;
+    margin: $margin;
+    font-size: 12px;
+    &:hover{
+    background-color: $hover;
+    color: $main_color;
+    }
+}
