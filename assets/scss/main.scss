@@ -726,6 +726,7 @@ main{
           align-items: center;
           margin-left: 10rem;
           margin-top: 5rem;
+          
   h1 {
     font-family:$font-family;
     margin-left: 3rem;
@@ -745,8 +746,30 @@ main{
     // &:nth-child(3){
     //   display: none;  
   }
-  
   }
+}
+.circle{
+  .big-circle{
+        width:450px;
+        height: 450px;
+        border-radius: $border-radius;
+        background-color: $main_color;
+        border: 3px solid $accent_color;
+        margin: 10px ;
+    margin-left: 950px;
+  margin-top: -600px;
+  }
+  .small-circle{
+            width:150px;
+            height:150px;
+            border-radius: $border-radius;
+            background-color: $main_color;
+            border: 3px solid $accent_color;
+            @include display-flex;
+            margin-left: 1000px;
+            margin-top: -120px;
+            
+        }
 }
 .footer-container {
 width: 100%;       
@@ -756,6 +779,7 @@ margin-left: 3rem;
  justify-content: grid;
  grid-template-columns: 3, 1fr;
  gap: 4rem;
+   
 
  .footer-section {
   &.contact-info{
@@ -797,6 +821,7 @@ margin-left: 3rem;
     
   }
   }
+  
   .footer-logo {
     .huge_circle {
       width: 160px; 

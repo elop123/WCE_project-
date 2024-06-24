@@ -829,6 +829,27 @@ main .top-circle h3 {
     margin-top: 3rem;
     margin-right: 3rem;
   }
+  .circle .big-circle {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background-color: #40A578;
+    border: 3px solid #E6FF94;
+    margin: 10px;
+    margin-left: 950px;
+    margin-top: -600px;
+  }
+  .circle .small-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #40A578;
+    border: 3px solid #E6FF94;
+    display: flex;
+    justify-content: center;
+    margin-left: 1000px;
+    margin-top: -120px;
+  }
   .footer-container {
     width: 100%;
     margin-top: 8rem;
